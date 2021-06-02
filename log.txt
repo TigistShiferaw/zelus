@@ -1,0 +1,921 @@
+Workspace root: /home/joselvdm/Desktop/research/zelus-parser
+Running[0]: /usr/bin/nproc > /tmp/dune56b546.output 2> /dev/null
+Auto-detected concurrency: 2
+disable binary cache
+Running[1]: /usr/bin/ocamlc.opt -config > /tmp/dune3e55ff.output
+Dune context:
+ { name = "default"
+ ; kind = "default"
+ ; profile = Dyn
+ ; merlin = true
+ ; for_host = None
+ ; fdo_target_exe = None
+ ; build_dir = "default"
+ ; toplevel_path = Some External "/home/joselvdm/.opam/default/lib/toplevel"
+ ; ocaml_bin = External "/usr/bin"
+ ; ocaml = Ok External "/home/joselvdm/.opam/default/bin/ocaml"
+ ; ocamlc = External "/usr/bin/ocamlc.opt"
+ ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+ ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+ ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+ ; env =
+     map
+       { "DUNE_OCAML_HARDCODED" : "/home/joselvdm/.opam/default/lib"
+       ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+       ; "DUNE_SOURCEROOT" : "/home/joselvdm/Desktop/research/zelus-parser"
+       ; "INSIDE_DUNE" :
+           "/home/joselvdm/Desktop/research/zelus-parser/_build/default"
+       ; "OCAMLFIND_IGNORE_DUPS_IN" :
+           "/home/joselvdm/Desktop/research/zelus-parser/_build/install/default/lib"
+       ; "OCAMLPATH" :
+           "/home/joselvdm/Desktop/research/zelus-parser/_build/install/default/lib"
+       ; "OCAMLTOP_INCLUDE_PATH" :
+           "/home/joselvdm/Desktop/research/zelus-parser/_build/install/default/lib/toplevel"
+       }
+ ; findlib_path = [ External "/home/joselvdm/.opam/default/lib" ]
+ ; arch_sixtyfour = true
+ ; natdynlink_supported = true
+ ; supports_shared_libraries = true
+ ; ocaml_config =
+     { version = "4.08.1"
+     ; standard_library_default = "/usr/lib/ocaml"
+     ; standard_library = "/usr/lib/ocaml"
+     ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+     ; ccomp_type = "cc"
+     ; c_compiler = "x86_64-linux-gnu-gcc"
+     ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+     ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+     ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+     ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+     ; bytecomp_c_compiler =
+         [ "x86_64-linux-gnu-gcc"
+         ; "-O2"
+         ; "-fno-strict-aliasing"
+         ; "-fwrapv"
+         ; "-fPIC"
+         ; "-D_FILE_OFFSET_BITS=64"
+         ; "-D_REENTRANT"
+         ]
+     ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+     ; native_c_compiler =
+         [ "x86_64-linux-gnu-gcc"
+         ; "-O2"
+         ; "-fno-strict-aliasing"
+         ; "-fwrapv"
+         ; "-D_FILE_OFFSET_BITS=64"
+         ; "-D_REENTRANT"
+         ]
+     ; native_c_libraries = [ "-lm"; "-ldl" ]
+     ; cc_profile = [ "-pg" ]
+     ; architecture = "amd64"
+     ; model = "default"
+     ; int_size = 63
+     ; word_size = 64
+     ; system = "linux"
+     ; asm = [ "x86_64-linux-gnu-as" ]
+     ; asm_cfi_supported = true
+     ; with_frame_pointers = false
+     ; ext_exe = ""
+     ; ext_obj = ".o"
+     ; ext_asm = ".s"
+     ; ext_lib = ".a"
+     ; ext_dll = ".so"
+     ; os_type = "Unix"
+     ; default_executable_name = "a.out"
+     ; systhread_supported = true
+     ; host = "x86_64-pc-linux-gnu"
+     ; target = "x86_64-pc-linux-gnu"
+     ; profiling = true
+     ; flambda = false
+     ; spacetime = false
+     ; safe_string = false
+     ; exec_magic_number = "Caml1999X025"
+     ; cmi_magic_number = "Caml1999I025"
+     ; cmo_magic_number = "Caml1999O025"
+     ; cma_magic_number = "Caml1999A025"
+     ; cmx_magic_number = "Caml1999Y025"
+     ; cmxa_magic_number = "Caml1999Z025"
+     ; ast_impl_magic_number = "Caml1999M025"
+     ; ast_intf_magic_number = "Caml1999N025"
+     ; cmxs_magic_number = "Caml1999D025"
+     ; cmt_magic_number = "Caml1999T025"
+     ; natdynlink_supported = true
+     ; supports_shared_libraries = true
+     ; windows_unicode = false
+     }
+ }
+Actual targets:
+- alias @@default
+Running[2]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/basics.ml) > _build/default/lib/std/.zlstdlib.objs/basics.ml.d
+Running[3]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/defaultsolver.ml) > _build/default/lib/std/.zlstdlib.objs/defaultsolver.ml.d
+Running[4]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/activate.ml) > _build/default/compiler/.zlcompilerlibs.objs/activate.ml.d
+Running[5]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/add_copy_for_last.ml) > _build/default/compiler/.zlcompilerlibs.objs/add_copy_for_last.ml.d
+Running[6]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/aform.ml) > _build/default/compiler/.zlcompilerlibs.objs/aform.ml.d
+Running[7]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/automata.ml) > _build/default/compiler/.zlcompilerlibs.objs/automata.ml.d
+Running[8]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/analysis/causal.ml) > _build/default/compiler/.zlcompilerlibs.objs/causal.ml.d
+Running[9]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/analysis/causality.ml) > _build/default/compiler/.zlcompilerlibs.objs/causality.ml.d
+Running[10]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/complete.ml) > _build/default/compiler/.zlcompilerlibs.objs/complete.ml.d
+Running[11]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/control.ml) > _build/default/compiler/.zlcompilerlibs.objs/control.ml.d
+Running[12]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/copy.ml) > _build/default/compiler/.zlcompilerlibs.objs/copy.ml.d
+Running[13]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/cost.ml) > _build/default/compiler/.zlcompilerlibs.objs/cost.ml.d
+Running[14]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/cse.ml) > _build/default/compiler/.zlcompilerlibs.objs/cse.ml.d
+Running[15]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/defcaus.ml) > _build/default/compiler/.zlcompilerlibs.objs/defcaus.ml.d
+Running[16]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/definit.ml) > _build/default/compiler/.zlcompilerlibs.objs/definit.ml.d
+Running[17]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/deftypes.ml) > _build/default/compiler/.zlcompilerlibs.objs/deftypes.ml.d
+Running[18]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/dependences.ml) > _build/default/compiler/.zlcompilerlibs.objs/dependences.ml.d
+Running[19]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/deps_tools.ml) > _build/default/compiler/.zlcompilerlibs.objs/deps_tools.ml.d
+Running[20]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/disc.ml) > _build/default/compiler/.zlcompilerlibs.objs/disc.ml.d
+Running[21]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/encore.ml) > _build/default/compiler/.zlcompilerlibs.objs/encore.ml.d
+Running[22]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/global.ml) > _build/default/compiler/.zlcompilerlibs.objs/global.ml.d
+Running[23]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/graph.ml) > _build/default/compiler/.zlcompilerlibs.objs/graph.ml.d
+Running[24]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/horizon.ml) > _build/default/compiler/.zlcompilerlibs.objs/horizon.ml.d
+Running[25]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/analysis/init.ml) > _build/default/compiler/.zlcompilerlibs.objs/init.ml.d
+Running[26]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/initial.ml) > _build/default/compiler/.zlcompilerlibs.objs/initial.ml.d
+Running[27]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/analysis/initialization.ml) > _build/default/compiler/.zlcompilerlibs.objs/initialization.ml.d
+Running[28]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/inline.ml) > _build/default/compiler/.zlcompilerlibs.objs/inline.ml.d
+Running[29]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/inout.ml) > _build/default/compiler/.zlcompilerlibs.objs/inout.ml.d
+Running[30]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/interface.ml) > _build/default/compiler/.zlcompilerlibs.objs/interface.ml.d
+Running[31]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/letin.ml) > _build/default/compiler/.zlcompilerlibs.objs/letin.ml.d
+Running[32]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/lident.ml) > _build/default/compiler/.zlcompilerlibs.objs/lident.ml.d
+Running[33]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/verif/lmm.ml) > _build/default/compiler/.zlcompilerlibs.objs/lmm.ml.d
+Running[34]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/markfunctions.ml) > _build/default/compiler/.zlcompilerlibs.objs/markfunctions.ml.d
+Running[35]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/verif/match2condition.ml) > _build/default/compiler/.zlcompilerlibs.objs/match2condition.ml.d
+Running[36]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/modules.ml) > _build/default/compiler/.zlcompilerlibs.objs/modules.ml.d
+Running[37]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/oaux.ml) > _build/default/compiler/.zlcompilerlibs.objs/oaux.ml.d
+Running[38]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/obc.ml) > _build/default/compiler/.zlcompilerlibs.objs/obc.ml.d
+Running[39]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/ocamlprinter.ml) > _build/default/compiler/.zlcompilerlibs.objs/ocamlprinter.ml.d
+Running[40]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/oprinter.ml) > _build/default/compiler/.zlcompilerlibs.objs/oprinter.ml.d
+Running[41]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/patternsig.ml) > _build/default/compiler/.zlcompilerlibs.objs/patternsig.ml.d
+Running[42]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/pcaus.ml) > _build/default/compiler/.zlcompilerlibs.objs/pcaus.ml.d
+Running[43]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/period.ml) > _build/default/compiler/.zlcompilerlibs.objs/period.ml.d
+Running[44]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/pinit.ml) > _build/default/compiler/.zlcompilerlibs.objs/pinit.ml.d
+Running[45]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/verif/plmm.ml) > _build/default/compiler/.zlcompilerlibs.objs/plmm.ml.d
+Running[46]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/pp_tools.ml) > _build/default/compiler/.zlcompilerlibs.objs/pp_tools.ml.d
+Running[47]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/pre.ml) > _build/default/compiler/.zlcompilerlibs.objs/pre.ml.d
+Running[48]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/present.ml) > _build/default/compiler/.zlcompilerlibs.objs/present.ml.d
+Running[49]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/printer.ml) > _build/default/compiler/.zlcompilerlibs.objs/printer.ml.d
+Running[50]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/proba.ml) > _build/default/compiler/.zlcompilerlibs.objs/proba.ml.d
+Running[51]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/ptypes.ml) > _build/default/compiler/.zlcompilerlibs.objs/ptypes.ml.d
+Running[52]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/reduce.ml) > _build/default/compiler/.zlcompilerlibs.objs/reduce.ml.d
+Running[53]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/remove_last_in_patterns.ml) > _build/default/compiler/.zlcompilerlibs.objs/remove_last_in_patterns.ml.d
+Running[54]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/reset.ml) > _build/default/compiler/.zlcompilerlibs.objs/reset.ml.d
+Running[55]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/schedule.ml) > _build/default/compiler/.zlcompilerlibs.objs/schedule.ml.d
+Running[56]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/scoping.ml) > _build/default/compiler/.zlcompilerlibs.objs/scoping.ml.d
+Running[57]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/shared.ml) > _build/default/compiler/.zlcompilerlibs.objs/shared.ml.d
+Running[58]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/static.ml) > _build/default/compiler/.zlcompilerlibs.objs/static.ml.d
+Running[59]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/total.ml) > _build/default/compiler/.zlcompilerlibs.objs/total.ml.d
+Running[60]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/gencode/translate.ml) > _build/default/compiler/.zlcompilerlibs.objs/translate.ml.d
+Running[61]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/typerrors.ml) > _build/default/compiler/.zlcompilerlibs.objs/typerrors.ml.d
+Running[62]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/typing.ml) > _build/default/compiler/.zlcompilerlibs.objs/typing.ml.d
+Running[63]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/unsafe.ml) > _build/default/compiler/.zlcompilerlibs.objs/unsafe.ml.d
+Running[64]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/vars.ml) > _build/default/compiler/.zlcompilerlibs.objs/vars.ml.d
+Running[65]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/write.ml) > _build/default/compiler/.zlcompilerlibs.objs/write.ml.d
+Running[66]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/zaux.ml) > _build/default/compiler/.zlcompilerlibs.objs/zaux.ml.d
+Running[67]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/zconfig.ml) > _build/default/compiler/.zlcompilerlibs.objs/zconfig.ml.d
+Running[68]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/zdeadcode.ml) > _build/default/compiler/.zlcompilerlibs.objs/zdeadcode.ml.d
+Running[69]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/parsing/zdepend.ml) > _build/default/compiler/.zlcompilerlibs.objs/zdepend.ml.d
+Running[70]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/zelus.ml) > _build/default/compiler/.zlcompilerlibs.objs/zelus.ml.d
+Running[71]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/zident.ml) > _build/default/compiler/.zlcompilerlibs.objs/zident.ml.d
+Running[72]: (cd _build/default && /usr/bin/ocamllex -q -o compiler/parsing/zlexer.ml compiler/parsing/zlexer.mll)
+Running[73]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/zlocation.ml) > _build/default/compiler/.zlcompilerlibs.objs/zlocation.ml.d
+Running[74]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/verif/zlus2lmm.ml) > _build/default/compiler/.zlcompilerlibs.objs/zlus2lmm.ml.d
+Running[75]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/zmatching.ml) > _build/default/compiler/.zlcompilerlibs.objs/zmatching.ml.d
+Running[76]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/global/zmisc.ml) > _build/default/compiler/.zlcompilerlibs.objs/zmisc.ml.d
+Running[77]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/rewrite/zopt.ml) > _build/default/compiler/.zlcompilerlibs.objs/zopt.ml.d
+Running[78]: (cd _build/default && /home/joselvdm/.opam/default/bin/menhir --explain --table compiler/parsing/zparser.mly --base compiler/parsing/zparser --infer-write-query compiler/parsing/zparser__mock.ml.mock)
+Running[79]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/parsing/zparsetree.ml) > _build/default/compiler/.zlcompilerlibs.objs/zparsetree.ml.d
+Running[80]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/typing/ztypes.ml) > _build/default/compiler/.zlcompilerlibs.objs/ztypes.ml.d
+Running[81]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/main/compiler.ml) > _build/default/compiler/.zeluc.eobjs/compiler.ml.d
+Running[82]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/main/fixstep.ml) > _build/default/compiler/.zeluc.eobjs/fixstep.ml.d
+Running[83]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/main/simulator.ml) > _build/default/compiler/.zeluc.eobjs/simulator.ml.d
+Running[84]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/main/zeluc.ml) > _build/default/compiler/.zeluc.eobjs/zeluc.ml.d
+Running[85]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf lib/std/illinois.mli) > _build/default/lib/std/.zlstdlib.objs/illinois.mli.d
+Running[86]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/lift.ml) > _build/default/lib/std/.zlstdlib.objs/lift.ml.d
+Running[87]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/node.ml) > _build/default/lib/std/.zlstdlib.objs/node.ml.d
+Running[88]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/node_base.ml) > _build/default/lib/std/.zlstdlib.objs/node_base.ml.d
+Running[89]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/odexx.ml) > _build/default/lib/std/.zlstdlib.objs/odexx.ml.d
+Running[90]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/run.ml) > _build/default/lib/std/.zlstdlib.objs/run.ml.d
+Running[91]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/solvers.ml) > _build/default/lib/std/.zlstdlib.objs/solvers.ml.d
+Running[92]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/zls.ml) > _build/default/lib/std/.zlstdlib.objs/zls.ml.d
+Running[93]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf lib/std/zlsolve.mli) > _build/default/lib/std/.zlstdlib.objs/zlsolve.mli.d
+Running[94]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf lib/std/zlsrun.mli) > _build/default/lib/std/.zlstdlib.objs/zlsrun.mli.d
+Running[95]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/ztypes.ml) > _build/default/lib/std/.zlstdlib.objs/ztypes.ml.d
+Running[96]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf lib/gtk/gtkplot.mli) > _build/default/lib/gtk/.gtklib.objs/gtkplot.mli.d
+Running[97]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/gtk/gtkplot.ml) > _build/default/lib/gtk/.gtklib.objs/gtkplot.ml.d
+Running[98]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/gtk/input.ml) > _build/default/lib/gtk/.gtklib.objs/input.ml.d
+Running[99]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf lib/gtk/zlsrungtk.mli) > _build/default/lib/gtk/.gtklib.objs/zlsrungtk.mli.d
+Running[100]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/gtk/zlsrungtk.ml) > _build/default/lib/gtk/.gtklib.objs/zlsrungtk.ml.d
+Running[101]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/illinois.ml) > _build/default/lib/std/.zlstdlib.objs/illinois.ml.d
+Running[102]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/zlsolve.ml) > _build/default/lib/std/.zlstdlib.objs/zlsolve.ml.d
+Running[103]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/zlsrun.ml) > _build/default/lib/std/.zlstdlib.objs/zlsrun.ml.d
+Running[104]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl tools/compiler.ml) > _build/default/tools/.zltohtml.eobjs/compiler.ml.d
+Running[105]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl tools/diff_log.ml) > _build/default/tools/.zltohtml.eobjs/diff_log.ml.d
+Running[106]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl tools/luciole_zls.ml) > _build/default/tools/.zltohtml.eobjs/luciole_zls.ml.d
+Running[107]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl tools/zlsdep.ml) > _build/default/tools/.zltohtml.eobjs/zlsdep.ml.d
+Running[108]: (cd _build/default && /usr/bin/ocamllex -q -o tools/zltohtml.ml tools/zltohtml.mll)
+Running[109]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/basics.cmo -c -impl lib/std/basics.ml)
+Running[110]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/definit.cmo -c -impl compiler/global/definit.ml)
+Running[111]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/lident.cmo -c -impl compiler/global/lident.ml)
+Running[112]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/pp_tools.cmo -c -impl compiler/global/pp_tools.ml)
+Running[113]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zconfig.cmo -c -impl compiler/zconfig.ml)
+Running[114]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zlocation.cmo -c -impl compiler/global/zlocation.ml)
+Running[115]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/parsing/zlexer.ml) > _build/default/compiler/.zlcompilerlibs.objs/zlexer.ml.d
+Running[116]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zmatching.cmo -c -impl compiler/typing/zmatching.ml)
+Running[117]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/parsing/zparser__mock.ml.mock) > _build/default/compiler/.zlcompilerlibs.objs/zparser__mock.ml.mock.d
+Running[118]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/ztypes.cmo -c -impl lib/std/ztypes.ml)
+Running[119]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl tools/zltohtml.ml) > _build/default/tools/.zltohtml.eobjs/zltohtml.ml.d
+Running[120]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/basics.cmx -c -impl lib/std/basics.ml)
+Running[121]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/definit.cmx -c -impl compiler/global/definit.ml)
+Running[122]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/lident.cmx -c -impl compiler/global/lident.ml)
+Running[123]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zconfig.cmx -c -impl compiler/zconfig.ml)
+Running[124]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zmisc.cmo -c -impl compiler/global/zmisc.ml)
+Running[125]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/pp_tools.cmx -c -impl compiler/global/pp_tools.ml)
+Running[126]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/graph.cmo -c -impl compiler/global/graph.ml)
+Running[127]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zident.cmo -c -impl compiler/global/zident.ml)
+Running[128]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zlocation.cmx -c -impl compiler/global/zlocation.ml)
+Running[129]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zparsetree.cmo -c -impl compiler/parsing/zparsetree.ml)
+Running[130]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zmatching.cmx -c -impl compiler/typing/zmatching.ml)
+Running[131]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/ztypes.cmx -c -impl lib/std/ztypes.ml)
+Running[132]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/run.cmo -c -impl lib/std/run.ml)
+Running[133]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/zls.cmo -c -impl lib/std/zls.ml)
+Running[134]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zmisc.cmx -c -impl compiler/global/zmisc.ml)
+Running[135]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zident.cmx -c -impl compiler/global/zident.ml)
+Running[136]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/defcaus.cmo -c -impl compiler/global/defcaus.ml)
+Running[137]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/lmm.cmo -c -impl compiler/verif/lmm.ml)
+Running[138]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/deftypes.cmo -c -impl compiler/global/deftypes.ml)
+Running[139]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/pinit.cmo -c -impl compiler/global/pinit.ml)
+Running[140]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/graph.cmx -c -impl compiler/global/graph.ml)
+Running[141]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zparsetree.cmx -c -impl compiler/parsing/zparsetree.ml)
+Running[142]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zdepend.cmo -c -impl compiler/parsing/zdepend.ml)
+Running[143]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/run.cmx -c -impl lib/std/run.ml)
+Running[144]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/zls.cmx -c -impl lib/std/zls.ml)
+Output[142]:
+File "compiler/parsing/zdepend.ml", line 107, characters 2-1131:
+107 | ..match eq.desc with
+108 |   | EQeq (p,e) -> add_pattern bv p; add_exp bv e
+109 |   | EQder (_, e, eo, phl) -> add_exp bv e; add_opt add_exp bv eo; List.iter (add_present_handler add_exp bv) phl
+110 |   | EQinit (_, e) | EQpluseq (_, e) -> add_exp bv e
+111 |   | EQnext (_, e, eo) -> add_exp bv e; add_opt add_exp bv eo
+...
+124 |   | EQassert (e) -> add_exp bv e;*)
+125 |   | EQreset (eql, e) -> List.iter (add_eq bv) eql; add_exp bv e
+126 |   | EQblock block -> add_block add_eq_list bv block
+127 |   | EQforall handler -> add_forall_handler bv handler
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+EQr_move _
+Running[145]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/illinois.cmi -c -intf lib/std/illinois.mli)
+Running[146]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/lift.cmo -c -impl lib/std/lift.ml)
+Running[147]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/odexx.cmo -c -impl lib/std/odexx.ml)
+Running[148]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/zlsolve.cmi -c -intf lib/std/zlsolve.mli)
+Running[149]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/zlsrun.cmi -c -intf lib/std/zlsrun.mli)
+Running[150]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/defcaus.cmx -c -impl compiler/global/defcaus.ml)
+Running[151]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/pcaus.cmo -c -impl compiler/global/pcaus.ml)
+Running[152]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/lmm.cmx -c -impl compiler/verif/lmm.ml)
+Running[153]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/deftypes.cmx -c -impl compiler/global/deftypes.ml)
+Running[154]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/obc.cmo -c -impl compiler/gencode/obc.ml)
+Running[155]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zelus.cmo -c -impl compiler/global/zelus.ml)
+Running[156]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/pinit.cmx -c -impl compiler/global/pinit.ml)
+Running[157]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zdepend.cmx -c -impl compiler/parsing/zdepend.ml)
+Running[158]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/illinois.cmo -c -impl lib/std/illinois.ml)
+Running[159]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/illinois.cmx -c -impl lib/std/illinois.ml)
+Output[157]:
+File "compiler/parsing/zdepend.ml", line 107, characters 2-1131:
+107 | ..match eq.desc with
+108 |   | EQeq (p,e) -> add_pattern bv p; add_exp bv e
+109 |   | EQder (_, e, eo, phl) -> add_exp bv e; add_opt add_exp bv eo; List.iter (add_present_handler add_exp bv) phl
+110 |   | EQinit (_, e) | EQpluseq (_, e) -> add_exp bv e
+111 |   | EQnext (_, e, eo) -> add_exp bv e; add_opt add_exp bv eo
+...
+124 |   | EQassert (e) -> add_exp bv e;*)
+125 |   | EQreset (eql, e) -> List.iter (add_eq bv) eql; add_exp bv e
+126 |   | EQblock block -> add_block add_eq_list bv block
+127 |   | EQforall handler -> add_forall_handler bv handler
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+EQr_move _
+Running[160]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/lift.cmx -c -impl lib/std/lift.ml)
+Running[161]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/zlsolve.cmo -c -impl lib/std/zlsolve.ml)
+Running[162]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/zlsolve.cmx -c -impl lib/std/zlsolve.ml)
+Running[163]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/zlsrun.cmo -c -impl lib/std/zlsrun.ml)
+Running[164]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/zlsrun.cmx -c -impl lib/std/zlsrun.ml)
+Running[165]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/odexx.cmx -c -impl lib/std/odexx.ml)
+Running[166]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/solvers.cmo -c -impl lib/std/solvers.ml)
+Running[167]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/pcaus.cmx -c -impl compiler/global/pcaus.ml)
+Running[168]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/obc.cmx -c -impl compiler/gencode/obc.ml)
+Running[169]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zelus.cmx -c -impl compiler/global/zelus.ml)
+Running[170]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/control.cmo -c -impl compiler/rewrite/control.ml)
+Running[171]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/copy.cmo -c -impl compiler/rewrite/copy.ml)
+Running[172]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/cse.cmo -c -impl compiler/rewrite/cse.ml)
+Output[171]:
+File "compiler/rewrite/copy.ml", line 72, characters 2-230:
+72 | ..match op with
+73 |   | Efby | Eunarypre | Eifthenelse 
+74 |     | Eminusgreater | Eup | Einitial | Edisc
+75 |     | Ehorizon | Etest | Eaccess | Eupdate | Econcat | Eatomic -> op
+76 |   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+File "compiler/rewrite/copy.ml", line 99, characters 2-1453:
+ 99 | ..match desc with
+100 |   | Econst _ | Econstr0 _ | Eglobal _ | Elast _ -> e
+101 |   | Elocal(x) -> { e with e_desc = rename x renaming }
+102 |   | Etuple(e_list) ->
+103 |      { e with e_desc = Etuple(List.map (expression renaming) e_list) }
+...
+128 |   | Elet(l, e_let) ->
+129 |      let renaming, l = local renaming l in
+130 |      { e with e_desc = Elet(l, expression renaming e_let) }
+131 |   | Eperiod _ | Epresent _ | Ematch _ | Eblock _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[173]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/global.cmo -c -impl compiler/global/global.ml)
+Running[174]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/vars.cmo -c -impl compiler/global/vars.ml)
+Running[175]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zopt.cmo -c -impl compiler/rewrite/zopt.ml)
+Output[174]:
+File "compiler/global/vars.ml", line 60, characters 19-224:
+60 | ...................function
+61 |   | Efby | Eunarypre | Eifthenelse | Etest 
+62 |     | Eminusgreater | Eup | Einitial | Edisc
+63 |     | Ehorizon | Eaccess | Eupdate | Econcat | Eatomic -> acc
+64 |     | Eslice(s1, s2) -> size (size acc s1) s2
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[176]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/solvers.cmx -c -impl lib/std/solvers.ml)
+Running[177]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/defaultsolver.cmo -c -impl lib/std/defaultsolver.ml)
+Running[178]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/node_base.cmo -c -impl lib/std/node_base.ml)
+Running[179]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/control.cmx -c -impl compiler/rewrite/control.ml)
+Running[180]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/copy.cmx -c -impl compiler/rewrite/copy.ml)
+Running[181]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/cse.cmx -c -impl compiler/rewrite/cse.ml)
+Output[180]:
+File "compiler/rewrite/copy.ml", line 72, characters 2-230:
+72 | ..match op with
+73 |   | Efby | Eunarypre | Eifthenelse 
+74 |     | Eminusgreater | Eup | Einitial | Edisc
+75 |     | Ehorizon | Etest | Eaccess | Eupdate | Econcat | Eatomic -> op
+76 |   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+File "compiler/rewrite/copy.ml", line 99, characters 2-1453:
+ 99 | ..match desc with
+100 |   | Econst _ | Econstr0 _ | Eglobal _ | Elast _ -> e
+101 |   | Elocal(x) -> { e with e_desc = rename x renaming }
+102 |   | Etuple(e_list) ->
+103 |      { e with e_desc = Etuple(List.map (expression renaming) e_list) }
+...
+128 |   | Elet(l, e_let) ->
+129 |      let renaming, l = local renaming l in
+130 |      { e with e_desc = Elet(l, expression renaming e_let) }
+131 |   | Eperiod _ | Epresent _ | Ematch _ | Eblock _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[182]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/global.cmx -c -impl compiler/global/global.ml)
+Running[183]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/modules.cmo -c -impl compiler/global/modules.ml)
+Running[184]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/vars.cmx -c -impl compiler/global/vars.ml)
+Running[185]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zopt.cmx -c -impl compiler/rewrite/zopt.ml)
+Output[184]:
+File "compiler/global/vars.ml", line 60, characters 19-224:
+60 | ...................function
+61 |   | Efby | Eunarypre | Eifthenelse | Etest 
+62 |     | Eminusgreater | Eup | Einitial | Edisc
+63 |     | Ehorizon | Eaccess | Eupdate | Econcat | Eatomic -> acc
+64 |     | Eslice(s1, s2) -> size (size acc s1) s2
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[186]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/defaultsolver.cmx -c -impl lib/std/defaultsolver.ml)
+Running[187]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/node_base.cmx -c -impl lib/std/node_base.ml)
+Running[188]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/node.cmo -c -impl lib/std/node.ml)
+Running[189]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/modules.cmx -c -impl compiler/global/modules.ml)
+Running[190]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/initial.cmo -c -impl compiler/global/initial.ml)
+Running[191]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/node.cmx -c -impl lib/std/node.ml)
+Running[192]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/initial.cmx -c -impl compiler/global/initial.ml)
+Running[193]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/oaux.cmo -c -impl compiler/gencode/oaux.ml)
+Running[194]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/ptypes.cmo -c -impl compiler/global/ptypes.ml)
+Running[195]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zaux.cmo -c -impl compiler/global/zaux.ml)
+Running[196]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/ztypes.cmo -c -impl compiler/typing/ztypes.ml)
+Running[197]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -short-paths -i -impl compiler/parsing/zparser__mock.ml.mock) > _build/default/compiler/parsing/zparser__mock.mli.inferred
+Running[198]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/oaux.cmx -c -impl compiler/gencode/oaux.ml)
+Running[199]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/ptypes.cmx -c -impl compiler/global/ptypes.ml)
+Running[200]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/printer.cmo -c -impl compiler/global/printer.ml)
+Output[200]:
+File "compiler/global/printer.ml", line 251, characters 2-2045:
+251 | ..match e.e_desc with
+252 |     | Elocal n -> name ff n
+253 |     | Eglobal { lname = ln } -> longname ff ln
+254 |     | Eop(op, e_list) -> operator ff op e_list
+255 |     | Elast x -> fprintf ff "last %a" name x
+...
+294 |         fprintf ff "@[<v>@[<hov 2>present@ @[%a@]@]@ @[%a@]@]"
+295 |           (print_list_l (present_handler scondpat expression)
+296 | 	     """""") present_handler_list
+297 |           (print_opt2 expression "else ") opt_e
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[201]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zaux.cmx -c -impl compiler/global/zaux.ml)
+Running[202]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/add_copy_for_last.cmo -c -impl compiler/rewrite/add_copy_for_last.ml)
+Running[203]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/complete.cmo -c -impl compiler/rewrite/complete.ml)
+Running[204]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/cost.cmo -c -impl compiler/rewrite/cost.ml)
+Running[205]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/horizon.cmo -c -impl compiler/rewrite/horizon.ml)
+Output[204]:
+File "compiler/rewrite/cost.ml", line 35, characters 4-944:
+35 | ....match e.e_desc with
+36 |       | Elocal _ | Elast _ | Econst _ | Econstr0 _ | Eglobal _ -> ()
+37 |       | Eapp(_, e, e_list) ->
+38 |          incr (1 + List.length e_list);
+39 | 	 List.iter cost e_list; cost e
+...
+52 |           cost_local local; cost e_let
+53 |       | Eblock(b, e_block) ->
+54 | 	 cost_block b; cost e_block
+55 |       | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+File "compiler/rewrite/cost.ml", line 57, characters 4-243:
+57 | ....match op with 
+58 |     | Efby | Eunarypre | Eminusgreater -> 2
+59 |     | Edisc -> 4
+60 |     | Einitial -> 2
+61 |     | Eup -> -2
+...
+64 |     | Eaccess -> 1
+65 |     | Ehorizon -> 1
+66 |     | Eupdate | Eslice _ | Econcat -> 1
+67 |     | Eatomic -> 0
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[206]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/letin.cmo -c -impl compiler/rewrite/letin.ml)
+Running[207]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/match2condition.cmo -c -impl compiler/verif/match2condition.ml)
+Running[208]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/remove_last_in_patterns.cmo -c -impl compiler/rewrite/remove_last_in_patterns.ml)
+Output[207]:
+File "compiler/verif/match2condition.ml", line 137, characters 2-796:
+137 | ..match desc with
+138 |   | Elocal _ | Eglobal _ | Econst _ | Econstr0 _ | Elast _ -> e
+139 |   | Eapp(app, e_arg, e_list) ->
+140 |       { e with e_desc = Eapp(app, expression e_arg,
+141 |                              List.map expression e_list) }
+...
+150 |   | Etuple(e_list) ->
+151 |       { e with e_desc = Etuple(List.map expression e_list) }
+152 |   | Econstr1 _ | Ematch _ | Eseq _ | Elet _ | Eperiod _ | Eblock _ | Epresent _
+153 |     -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(Erecord_with (_, _)|Eassume _)
+Running[209]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/reset.cmo -c -impl compiler/rewrite/reset.ml)
+Running[210]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/shared.cmo -c -impl compiler/rewrite/shared.ml)
+Running[211]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/static.cmo -c -impl compiler/rewrite/static.ml)
+Running[212]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/scoping.cmo -c -impl compiler/global/scoping.ml)
+Output[211]:
+File "compiler/rewrite/static.ml", line 99, characters 2-2070:
+ 99 | ..match desc with
+100 |   | Econst(i) -> Global.value_code (Vconst(i))
+101 |   | Econstr0(c) -> Global.value_code (Vconstr0(Modules.qualident c))
+102 |   | Eglobal { lname = lname } ->
+103 |      let { info = { value_code = v } } =
+...
+154 |      let env = local env l in
+155 |      expression env e_let
+156 |   | Eblock _ -> raise (Error (NotStaticExp e))
+157 |   | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[213]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/ztypes.cmx -c -impl compiler/typing/ztypes.ml)
+Running[214]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/activate.cmo -c -impl compiler/rewrite/activate.ml)
+Running[215]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/interface.cmo -c -impl compiler/typing/interface.ml)
+Running[216]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/period.cmo -c -impl compiler/rewrite/period.ml)
+Running[217]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/present.cmo -c -impl compiler/rewrite/present.ml)
+Running[218]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/proba.cmo -c -impl compiler/rewrite/proba.ml)
+Output[218]:
+File "compiler/rewrite/proba.ml", line 57, characters 2-1783:
+57 | ..match e_desc with
+58 |   | Eperiod({ p_phase = opt_p1; p_period = p2 }) ->
+59 |      { e with e_desc =
+60 | 		Eperiod({ p_phase =
+61 | 			    Zmisc.optional_map (expression prob) opt_p1;
+...
+95 |      { e with e_desc =
+96 | 		Eseq(expression prob e1, expression prob e2) }
+97 |   | Elocal _ | Eglobal _ | Econst _ | Econstr0 _ | Elast _ -> e
+98 |   | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[219]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/unsafe.cmo -c -impl compiler/rewrite/unsafe.ml)
+Running[220]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/printer.cmx -c -impl compiler/global/printer.ml)
+Running[221]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/oprinter.cmo -c -impl compiler/gencode/oprinter.ml)
+Running[222]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/plmm.cmo -c -impl compiler/verif/plmm.ml)
+Running[223]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/typerrors.cmo -c -impl compiler/typing/typerrors.ml)
+Running[224]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/aform.cmo -c -impl compiler/rewrite/aform.ml)
+Running[225]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/encore.cmo -c -impl compiler/rewrite/encore.ml)
+Output[220]:
+File "compiler/global/printer.ml", line 251, characters 2-2045:
+251 | ..match e.e_desc with
+252 |     | Elocal n -> name ff n
+253 |     | Eglobal { lname = ln } -> longname ff ln
+254 |     | Eop(op, e_list) -> operator ff op e_list
+255 |     | Elast x -> fprintf ff "last %a" name x
+...
+294 |         fprintf ff "@[<v>@[<hov 2>present@ @[%a@]@]@ @[%a@]@]"
+295 |           (print_list_l (present_handler scondpat expression)
+296 | 	     """""") present_handler_list
+297 |           (print_opt2 expression "else ") opt_e
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[226]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/causal.cmo -c -impl compiler/analysis/causal.ml)
+Running[227]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/init.cmo -c -impl compiler/analysis/init.ml)
+Running[228]: (cd _build/default && /home/joselvdm/.opam/default/bin/menhir --explain --table compiler/parsing/zparser.mly --base compiler/parsing/zparser --infer-read-reply compiler/parsing/zparser__mock.mli.inferred)
+Running[229]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/add_copy_for_last.cmx -c -impl compiler/rewrite/add_copy_for_last.ml)
+Running[230]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/complete.cmx -c -impl compiler/rewrite/complete.ml)
+Running[231]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/cost.cmx -c -impl compiler/rewrite/cost.ml)
+Output[231]:
+File "compiler/rewrite/cost.ml", line 35, characters 4-944:
+35 | ....match e.e_desc with
+36 |       | Elocal _ | Elast _ | Econst _ | Econstr0 _ | Eglobal _ -> ()
+37 |       | Eapp(_, e, e_list) ->
+38 |          incr (1 + List.length e_list);
+39 | 	 List.iter cost e_list; cost e
+...
+52 |           cost_local local; cost e_let
+53 |       | Eblock(b, e_block) ->
+54 | 	 cost_block b; cost e_block
+55 |       | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+File "compiler/rewrite/cost.ml", line 57, characters 4-243:
+57 | ....match op with 
+58 |     | Efby | Eunarypre | Eminusgreater -> 2
+59 |     | Edisc -> 4
+60 |     | Einitial -> 2
+61 |     | Eup -> -2
+...
+64 |     | Eaccess -> 1
+65 |     | Ehorizon -> 1
+66 |     | Eupdate | Eslice _ | Econcat -> 1
+67 |     | Eatomic -> 0
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[232]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/inline.cmo -c -impl compiler/rewrite/inline.ml)
+Output[232]:
+File "compiler/rewrite/inline.ml", line 113, characters 2-225:
+113 | ..match op with
+114 |   | Eunarypre | Efby | Eminusgreater | Eifthenelse
+115 |   | Eup | Etest | Edisc | Ehorizon | Einitial | Eaccess
+116 |   | Eupdate | Econcat | Eatomic -> op
+117 |   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[233]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/horizon.cmx -c -impl compiler/rewrite/horizon.ml)
+Running[234]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/letin.cmx -c -impl compiler/rewrite/letin.ml)
+Running[235]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/match2condition.cmx -c -impl compiler/verif/match2condition.ml)
+Output[235]:
+File "compiler/verif/match2condition.ml", line 137, characters 2-796:
+137 | ..match desc with
+138 |   | Elocal _ | Eglobal _ | Econst _ | Econstr0 _ | Elast _ -> e
+139 |   | Eapp(app, e_arg, e_list) ->
+140 |       { e with e_desc = Eapp(app, expression e_arg,
+141 |                              List.map expression e_list) }
+...
+150 |   | Etuple(e_list) ->
+151 |       { e with e_desc = Etuple(List.map expression e_list) }
+152 |   | Econstr1 _ | Ematch _ | Eseq _ | Elet _ | Eperiod _ | Eblock _ | Epresent _
+153 |     -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(Erecord_with (_, _)|Eassume _)
+Running[236]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/reset.cmx -c -impl compiler/rewrite/reset.ml)
+Running[237]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/remove_last_in_patterns.cmx -c -impl compiler/rewrite/remove_last_in_patterns.ml)
+Output[228]:
+Warning: 2 states have shift/reduce conflicts.
+Warning: 34 shift/reduce conflicts were arbitrarily resolved.
+Running[238]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/shared.cmx -c -impl compiler/rewrite/shared.ml)
+Running[239]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/static.cmx -c -impl compiler/rewrite/static.ml)
+Running[240]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/reduce.cmo -c -impl compiler/rewrite/reduce.ml)
+Output[239]:
+File "compiler/rewrite/static.ml", line 99, characters 2-2070:
+ 99 | ..match desc with
+100 |   | Econst(i) -> Global.value_code (Vconst(i))
+101 |   | Econstr0(c) -> Global.value_code (Vconstr0(Modules.qualident c))
+102 |   | Eglobal { lname = lname } ->
+103 |      let { info = { value_code = v } } =
+...
+154 |      let env = local env l in
+155 |      expression env e_let
+156 |   | Eblock _ -> raise (Error (NotStaticExp e))
+157 |   | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[241]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/scoping.cmx -c -impl compiler/global/scoping.ml)
+Output[240]:
+File "compiler/rewrite/reduce.ml", line 108, characters 2-235:
+108 | ..match op with
+109 |   | Eunarypre | Efby | Eminusgreater | Eifthenelse
+110 |   | Eup | Etest | Edisc | Ehorizon | Einitial | Eaccess
+111 |   | Eupdate | Econcat | Eatomic -> op
+112 |   | Eslice(s1, s2) -> Eslice(size venv renaming s1, size venv renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[242]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/activate.cmx -c -impl compiler/rewrite/activate.ml)
+Running[243]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/interface.cmx -c -impl compiler/typing/interface.ml)
+Running[244]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/automata.cmo -c -impl compiler/rewrite/automata.ml)
+Running[245]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zlus2lmm.cmo -c -impl compiler/verif/zlus2lmm.ml)
+Output[245]:
+File "compiler/verif/zlus2lmm.ml", line 167, characters 2-357:
+167 | ..match op with
+168 |   | Eifthenelse -> Lapp(Lifthenelse, e_list)
+169 |   | Eunarypre -> Lapp(Lunarypre, e_list)
+170 |   | Eminusgreater -> Lapp(Lminusgreater, e_list)
+171 |   | Efby -> Lapp(Lfby, e_list)
+172 |   | Eup | Einitial | Edisc | Ehorizon -> error loc Ehybrid_operator
+173 |   | Eaccess | Eupdate | Econcat | Eslice _ -> error loc Earray_operator
+174 |   | Etest | Eatomic -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+File "compiler/verif/zlus2lmm.ml", line 189, characters 2-805:
+189 | ..match desc with
+190 |   | Elocal(id) -> Llocal(id)
+191 |   | Eglobal { lname = lid } -> Lglobal(lid)
+192 |   | Econst(im) -> Lconst(immediate im)
+193 |   | Econstr0(lid) -> Lconstr0(lid)
+...
+206 |   | Etypeconstraint(e, _) -> expression ck e
+207 |   | Etuple(e_list) -> Ltuple(List.map (expression ck) e_list)
+208 |   | Ematch _ | Eseq _ | Elet _
+209 |   | Eperiod _ | Eblock _ | Epresent _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(Erecord_with (_, _)|Eassume _)
+File "compiler/verif/zlus2lmm.ml", line 298, characters 11-71:
+298 | let kind = function | S | AS | A | AD -> A | D -> D | C -> assert false
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+P
+Running[246]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/translate.cmo -c -impl compiler/gencode/translate.ml)
+Running[247]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/period.cmx -c -impl compiler/rewrite/period.ml)
+Output[246]:
+File "compiler/gencode/translate.ml", line 432, characters 2-3678:
+432 | ..match desc with
+433 |   | Zelus.Econst(i) -> Oconst(immediate i), code
+434 |   | Zelus.Elocal(n)
+435 |   | Zelus.Elast(n) -> var (entry_of n env), code
+436 |   | Zelus.Eglobal { lname = ln } -> Oglobal(ln), code
+...
+514 |      match ne_list with
+515 |      | [] -> e_fun, code
+516 |      | _ -> let k = Ztypes.kind_of_funtype ty_res in
+517 | 	    apply k env loop_path e_fun ne_list code
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[248]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/proba.cmx -c -impl compiler/rewrite/proba.ml)
+Running[249]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/present.cmx -c -impl compiler/rewrite/present.ml)
+Output[248]:
+File "compiler/rewrite/proba.ml", line 57, characters 2-1783:
+57 | ..match e_desc with
+58 |   | Eperiod({ p_phase = opt_p1; p_period = p2 }) ->
+59 |      { e with e_desc =
+60 | 		Eperiod({ p_phase =
+61 | 			    Zmisc.optional_map (expression prob) opt_p1;
+...
+95 |      { e with e_desc =
+96 | 		Eseq(expression prob e1, expression prob e2) }
+97 |   | Elocal _ | Eglobal _ | Econst _ | Econstr0 _ | Elast _ -> e
+98 |   | Epresent _ | Ematch _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[250]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/unsafe.cmx -c -impl compiler/rewrite/unsafe.ml)
+Running[251]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/dependences.cmo -c -impl compiler/rewrite/dependences.ml)
+Running[252]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/disc.cmo -c -impl compiler/rewrite/disc.ml)
+Running[253]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/pre.cmo -c -impl compiler/rewrite/pre.ml)
+Running[254]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zdeadcode.cmo -c -impl compiler/rewrite/zdeadcode.ml)
+Running[255]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/oprinter.cmx -c -impl compiler/gencode/oprinter.ml)
+Running[256]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/ocamlprinter.cmo -c -impl compiler/gencode/ocamlprinter.ml)
+Running[257]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/plmm.cmx -c -impl compiler/verif/plmm.ml)
+Running[258]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/typerrors.cmx -c -impl compiler/typing/typerrors.ml)
+Running[259]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/patternsig.cmo -c -impl compiler/typing/patternsig.ml)
+Running[260]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/total.cmo -c -impl compiler/typing/total.ml)
+Running[261]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/aform.cmx -c -impl compiler/rewrite/aform.ml)
+Running[262]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/encore.cmx -c -impl compiler/rewrite/encore.ml)
+Running[263]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/init.cmx -c -impl compiler/analysis/init.ml)
+Running[264]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/initialization.cmo -c -impl compiler/analysis/initialization.ml)
+Running[265]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/causal.cmx -c -impl compiler/analysis/causal.ml)
+Running[266]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/markfunctions.cmo -c -impl compiler/rewrite/markfunctions.ml)
+Running[267]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/causality.cmo -c -impl compiler/analysis/causality.ml)
+Running[268]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/inline.cmx -c -impl compiler/rewrite/inline.ml)
+Running[269]: (cd _build/default && /usr/bin/ocamldep.opt -modules -intf compiler/parsing/zparser.mli) > _build/default/compiler/.zlcompilerlibs.objs/zparser.mli.d
+Running[270]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl compiler/parsing/zparser.ml) > _build/default/compiler/.zlcompilerlibs.objs/zparser.ml.d
+Output[268]:
+File "compiler/rewrite/inline.ml", line 113, characters 2-225:
+113 | ..match op with
+114 |   | Eunarypre | Efby | Eminusgreater | Eifthenelse
+115 |   | Eup | Etest | Edisc | Ehorizon | Einitial | Eaccess
+116 |   | Eupdate | Econcat | Eatomic -> op
+117 |   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[271]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/reduce.cmx -c -impl compiler/rewrite/reduce.ml)
+Running[272]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zlus2lmm.cmx -c -impl compiler/verif/zlus2lmm.ml)
+Output[272]:
+File "compiler/verif/zlus2lmm.ml", line 167, characters 2-357:
+167 | ..match op with
+168 |   | Eifthenelse -> Lapp(Lifthenelse, e_list)
+169 |   | Eunarypre -> Lapp(Lunarypre, e_list)
+170 |   | Eminusgreater -> Lapp(Lminusgreater, e_list)
+171 |   | Efby -> Lapp(Lfby, e_list)
+172 |   | Eup | Einitial | Edisc | Ehorizon -> error loc Ehybrid_operator
+173 |   | Eaccess | Eupdate | Econcat | Eslice _ -> error loc Earray_operator
+174 |   | Etest | Eatomic -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+File "compiler/verif/zlus2lmm.ml", line 189, characters 2-805:
+189 | ..match desc with
+190 |   | Elocal(id) -> Llocal(id)
+191 |   | Eglobal { lname = lid } -> Lglobal(lid)
+192 |   | Econst(im) -> Lconst(immediate im)
+193 |   | Econstr0(lid) -> Lconstr0(lid)
+...
+206 |   | Etypeconstraint(e, _) -> expression ck e
+207 |   | Etuple(e_list) -> Ltuple(List.map (expression ck) e_list)
+208 |   | Ematch _ | Eseq _ | Elet _
+209 |   | Eperiod _ | Eblock _ | Epresent _ -> assert false
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+(Erecord_with (_, _)|Eassume _)
+File "compiler/verif/zlus2lmm.ml", line 298, characters 11-71:
+298 | let kind = function | S | AS | A | AD -> A | D -> D | C -> assert false
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+P
+Running[273]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/automata.cmx -c -impl compiler/rewrite/automata.ml)
+Output[271]:
+File "compiler/rewrite/reduce.ml", line 108, characters 2-235:
+108 | ..match op with
+109 |   | Eunarypre | Efby | Eminusgreater | Eifthenelse
+110 |   | Eup | Etest | Edisc | Ehorizon | Einitial | Eaccess
+111 |   | Eupdate | Econcat | Eatomic -> op
+112 |   | Eslice(s1, s2) -> Eslice(size venv renaming s1, size venv renaming s2)
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[274]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/translate.cmx -c -impl compiler/gencode/translate.ml)
+Running[275]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/inout.cmo -c -impl compiler/gencode/inout.ml)
+Running[276]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/dependences.cmx -c -impl compiler/rewrite/dependences.ml)
+Output[274]:
+File "compiler/gencode/translate.ml", line 432, characters 2-3678:
+432 | ..match desc with
+433 |   | Zelus.Econst(i) -> Oconst(immediate i), code
+434 |   | Zelus.Elocal(n)
+435 |   | Zelus.Elast(n) -> var (entry_of n env), code
+436 |   | Zelus.Eglobal { lname = ln } -> Oglobal(ln), code
+...
+514 |      match ne_list with
+515 |      | [] -> e_fun, code
+516 |      | _ -> let k = Ztypes.kind_of_funtype ty_res in
+517 | 	    apply k env loop_path e_fun ne_list code
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassume _
+Running[277]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/schedule.cmo -c -impl compiler/rewrite/schedule.ml)
+Running[278]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/disc.cmx -c -impl compiler/rewrite/disc.ml)
+Running[279]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/pre.cmx -c -impl compiler/rewrite/pre.ml)
+Running[280]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zdeadcode.cmx -c -impl compiler/rewrite/zdeadcode.ml)
+Running[281]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/ocamlprinter.cmx -c -impl compiler/gencode/ocamlprinter.ml)
+Running[282]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/patternsig.cmx -c -impl compiler/typing/patternsig.ml)
+Running[283]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/total.cmx -c -impl compiler/typing/total.ml)
+Running[284]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/write.cmo -c -impl compiler/rewrite/write.ml)
+Running[285]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/typing.cmo -c -impl compiler/typing/typing.ml)
+Running[286]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/initialization.cmx -c -impl compiler/analysis/initialization.ml)
+Output[285]:
+File "compiler/typing/typing.ml", line 798, characters 4-756:
+798 | ....match op with
+799 |     | Eifthenelse ->
+800 |         let ty = new_var () in
+801 |         Tany, [Initial.typ_bool; ty; ty], ty
+802 |     | Eunarypre ->
+...
+818 |     | Eatomic ->
+819 |         let ty = new_var () in
+820 |         expected_k, [ty], ty
+821 |     | Eaccess | Eupdate | Eslice _ | Econcat -> assert false...
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[287]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/markfunctions.cmx -c -impl compiler/rewrite/markfunctions.ml)
+Running[288]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/causality.cmx -c -impl compiler/analysis/causality.ml)
+Running[289]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zparser.cmi -c -intf compiler/parsing/zparser.mli)
+Running[290]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/inout.cmx -c -impl compiler/gencode/inout.ml)
+Running[291]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/schedule.cmx -c -impl compiler/rewrite/schedule.ml)
+Running[292]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/write.cmx -c -impl compiler/rewrite/write.ml)
+Running[293]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/typing.cmx -c -impl compiler/typing/typing.ml)
+Running[294]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zparser.cmo -c -impl compiler/parsing/zparser.ml)
+Output[293]:
+File "compiler/typing/typing.ml", line 798, characters 4-756:
+798 | ....match op with
+799 |     | Eifthenelse ->
+800 |         let ty = new_var () in
+801 |         Tany, [Initial.typ_bool; ty; ty], ty
+802 |     | Eunarypre ->
+...
+818 |     | Eatomic ->
+819 |         let ty = new_var () in
+820 |         expected_k, [ty], ty
+821 |     | Eaccess | Eupdate | Eslice _ | Econcat -> assert false...
+Warning 8: this pattern-matching is not exhaustive.
+Here is an example of a case that is not matched:
+Eassert
+Running[295]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zparser.cmx -c -impl compiler/parsing/zparser.ml)
+Output[294]:
+File "compiler/parsing/zparser.ml", line 2909, characters 12-13:
+2909 |         let e : (Zparsetree.exp) = Obj.magic e in
+                   ^
+Warning 26: unused variable e.
+Running[296]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/zlexer.cmo -c -impl compiler/parsing/zlexer.ml)
+Running[297]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/zlexer.cmx -c -impl compiler/parsing/zlexer.ml)
+Running[298]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zlcompilerlibs.objs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/byte/deps_tools.cmo -c -impl compiler/global/deps_tools.ml)
+Running[299]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o compiler/zlcompilerlibs.cma compiler/.zlcompilerlibs.objs/byte/pp_tools.cmo compiler/.zlcompilerlibs.objs/byte/zident.cmo compiler/.zlcompilerlibs.objs/byte/defcaus.cmo compiler/.zlcompilerlibs.objs/byte/definit.cmo compiler/.zlcompilerlibs.objs/byte/lident.cmo compiler/.zlcompilerlibs.objs/byte/zconfig.cmo compiler/.zlcompilerlibs.objs/byte/zmisc.cmo compiler/.zlcompilerlibs.objs/byte/deftypes.cmo compiler/.zlcompilerlibs.objs/byte/zlocation.cmo compiler/.zlcompilerlibs.objs/byte/zelus.cmo compiler/.zlcompilerlibs.objs/byte/global.cmo compiler/.zlcompilerlibs.objs/byte/modules.cmo compiler/.zlcompilerlibs.objs/byte/initial.cmo compiler/.zlcompilerlibs.objs/byte/ztypes.cmo compiler/.zlcompilerlibs.objs/byte/zparsetree.cmo compiler/.zlcompilerlibs.objs/byte/zparser.cmo compiler/.zlcompilerlibs.objs/byte/zopt.cmo compiler/.zlcompilerlibs.objs/byte/zmatching.cmo compiler/.zlcompilerlibs.objs/byte/ptypes.cmo compiler/.zlcompilerlibs.objs/byte/interface.cmo compiler/.zlcompilerlibs.objs/byte/lmm.cmo compiler/.zlcompilerlibs.objs/byte/vars.cmo compiler/.zlcompilerlibs.objs/byte/zlus2lmm.cmo compiler/.zlcompilerlibs.objs/byte/zlexer.cmo compiler/.zlcompilerlibs.objs/byte/zdepend.cmo compiler/.zlcompilerlibs.objs/byte/printer.cmo compiler/.zlcompilerlibs.objs/byte/zaux.cmo compiler/.zlcompilerlibs.objs/byte/unsafe.cmo compiler/.zlcompilerlibs.objs/byte/zdeadcode.cmo compiler/.zlcompilerlibs.objs/byte/typerrors.cmo compiler/.zlcompilerlibs.objs/byte/total.cmo compiler/.zlcompilerlibs.objs/byte/write.cmo compiler/.zlcompilerlibs.objs/byte/patternsig.cmo compiler/.zlcompilerlibs.objs/byte/typing.cmo compiler/.zlcompilerlibs.objs/byte/obc.cmo compiler/.zlcompilerlibs.objs/byte/oaux.cmo compiler/.zlcompilerlibs.objs/byte/reset.cmo compiler/.zlcompilerlibs.objs/byte/translate.cmo compiler/.zlcompilerlibs.objs/byte/static.cmo compiler/.zlcompilerlibs.objs/byte/shared.cmo compiler/.zlcompilerlibs.objs/byte/scoping.cmo compiler/.zlcompilerlibs.objs/byte/control.cmo compiler/.zlcompilerlibs.objs/byte/graph.cmo compiler/.zlcompilerlibs.objs/byte/dependences.cmo compiler/.zlcompilerlibs.objs/byte/schedule.cmo compiler/.zlcompilerlibs.objs/byte/remove_last_in_patterns.cmo compiler/.zlcompilerlibs.objs/byte/reduce.cmo compiler/.zlcompilerlibs.objs/byte/proba.cmo compiler/.zlcompilerlibs.objs/byte/present.cmo compiler/.zlcompilerlibs.objs/byte/pre.cmo compiler/.zlcompilerlibs.objs/byte/plmm.cmo compiler/.zlcompilerlibs.objs/byte/pinit.cmo compiler/.zlcompilerlibs.objs/byte/period.cmo compiler/.zlcompilerlibs.objs/byte/pcaus.cmo compiler/.zlcompilerlibs.objs/byte/oprinter.cmo compiler/.zlcompilerlibs.objs/byte/ocamlprinter.cmo compiler/.zlcompilerlibs.objs/byte/match2condition.cmo compiler/.zlcompilerlibs.objs/byte/causal.cmo compiler/.zlcompilerlibs.objs/byte/markfunctions.cmo compiler/.zlcompilerlibs.objs/byte/letin.cmo compiler/.zlcompilerlibs.objs/byte/inout.cmo compiler/.zlcompilerlibs.objs/byte/cost.cmo compiler/.zlcompilerlibs.objs/byte/inline.cmo compiler/.zlcompilerlibs.objs/byte/init.cmo compiler/.zlcompilerlibs.objs/byte/initialization.cmo compiler/.zlcompilerlibs.objs/byte/horizon.cmo compiler/.zlcompilerlibs.objs/byte/encore.cmo compiler/.zlcompilerlibs.objs/byte/disc.cmo compiler/.zlcompilerlibs.objs/byte/deps_tools.cmo compiler/.zlcompilerlibs.objs/byte/cse.cmo compiler/.zlcompilerlibs.objs/byte/copy.cmo compiler/.zlcompilerlibs.objs/byte/complete.cmo compiler/.zlcompilerlibs.objs/byte/causality.cmo compiler/.zlcompilerlibs.objs/byte/automata.cmo compiler/.zlcompilerlibs.objs/byte/aform.cmo compiler/.zlcompilerlibs.objs/byte/add_copy_for_last.cmo compiler/.zlcompilerlibs.objs/byte/activate.cmo)
+Running[300]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -I /home/joselvdm/.opam/default/lib/menhirLib -intf-suffix .ml -no-alias-deps -opaque -o compiler/.zlcompilerlibs.objs/native/deps_tools.cmx -c -impl compiler/global/deps_tools.ml)
+Running[301]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I compiler/.zeluc.eobjs/byte -no-alias-deps -opaque -o compiler/.zeluc.eobjs/byte/dune__exe.cmo -c -impl compiler/.zeluc.eobjs/dune__exe.ml-gen)
+Running[302]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zeluc.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o compiler/.zeluc.eobjs/byte/dune__exe__Compiler.cmo -c -impl compiler/main/compiler.ml)
+Running[303]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zeluc.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o compiler/.zeluc.eobjs/byte/dune__exe__Simulator.cmo -c -impl compiler/main/simulator.ml)
+Output[295]:
+File "compiler/parsing/zparser.ml", line 2909, characters 12-13:
+2909 |         let e : (Zparsetree.exp) = Obj.magic e in
+                   ^
+Warning 26: unused variable e.
+Running[304]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o compiler/zlcompilerlibs.cmxa compiler/.zlcompilerlibs.objs/native/pp_tools.cmx compiler/.zlcompilerlibs.objs/native/zident.cmx compiler/.zlcompilerlibs.objs/native/defcaus.cmx compiler/.zlcompilerlibs.objs/native/definit.cmx compiler/.zlcompilerlibs.objs/native/lident.cmx compiler/.zlcompilerlibs.objs/native/zconfig.cmx compiler/.zlcompilerlibs.objs/native/zmisc.cmx compiler/.zlcompilerlibs.objs/native/deftypes.cmx compiler/.zlcompilerlibs.objs/native/zlocation.cmx compiler/.zlcompilerlibs.objs/native/zelus.cmx compiler/.zlcompilerlibs.objs/native/global.cmx compiler/.zlcompilerlibs.objs/native/modules.cmx compiler/.zlcompilerlibs.objs/native/initial.cmx compiler/.zlcompilerlibs.objs/native/ztypes.cmx compiler/.zlcompilerlibs.objs/native/zparsetree.cmx compiler/.zlcompilerlibs.objs/native/zparser.cmx compiler/.zlcompilerlibs.objs/native/zopt.cmx compiler/.zlcompilerlibs.objs/native/zmatching.cmx compiler/.zlcompilerlibs.objs/native/ptypes.cmx compiler/.zlcompilerlibs.objs/native/interface.cmx compiler/.zlcompilerlibs.objs/native/lmm.cmx compiler/.zlcompilerlibs.objs/native/vars.cmx compiler/.zlcompilerlibs.objs/native/zlus2lmm.cmx compiler/.zlcompilerlibs.objs/native/zlexer.cmx compiler/.zlcompilerlibs.objs/native/zdepend.cmx compiler/.zlcompilerlibs.objs/native/printer.cmx compiler/.zlcompilerlibs.objs/native/zaux.cmx compiler/.zlcompilerlibs.objs/native/unsafe.cmx compiler/.zlcompilerlibs.objs/native/zdeadcode.cmx compiler/.zlcompilerlibs.objs/native/typerrors.cmx compiler/.zlcompilerlibs.objs/native/total.cmx compiler/.zlcompilerlibs.objs/native/write.cmx compiler/.zlcompilerlibs.objs/native/patternsig.cmx compiler/.zlcompilerlibs.objs/native/typing.cmx compiler/.zlcompilerlibs.objs/native/obc.cmx compiler/.zlcompilerlibs.objs/native/oaux.cmx compiler/.zlcompilerlibs.objs/native/reset.cmx compiler/.zlcompilerlibs.objs/native/translate.cmx compiler/.zlcompilerlibs.objs/native/static.cmx compiler/.zlcompilerlibs.objs/native/shared.cmx compiler/.zlcompilerlibs.objs/native/scoping.cmx compiler/.zlcompilerlibs.objs/native/control.cmx compiler/.zlcompilerlibs.objs/native/graph.cmx compiler/.zlcompilerlibs.objs/native/dependences.cmx compiler/.zlcompilerlibs.objs/native/schedule.cmx compiler/.zlcompilerlibs.objs/native/remove_last_in_patterns.cmx compiler/.zlcompilerlibs.objs/native/reduce.cmx compiler/.zlcompilerlibs.objs/native/proba.cmx compiler/.zlcompilerlibs.objs/native/present.cmx compiler/.zlcompilerlibs.objs/native/pre.cmx compiler/.zlcompilerlibs.objs/native/plmm.cmx compiler/.zlcompilerlibs.objs/native/pinit.cmx compiler/.zlcompilerlibs.objs/native/period.cmx compiler/.zlcompilerlibs.objs/native/pcaus.cmx compiler/.zlcompilerlibs.objs/native/oprinter.cmx compiler/.zlcompilerlibs.objs/native/ocamlprinter.cmx compiler/.zlcompilerlibs.objs/native/match2condition.cmx compiler/.zlcompilerlibs.objs/native/causal.cmx compiler/.zlcompilerlibs.objs/native/markfunctions.cmx compiler/.zlcompilerlibs.objs/native/letin.cmx compiler/.zlcompilerlibs.objs/native/inout.cmx compiler/.zlcompilerlibs.objs/native/cost.cmx compiler/.zlcompilerlibs.objs/native/inline.cmx compiler/.zlcompilerlibs.objs/native/init.cmx compiler/.zlcompilerlibs.objs/native/initialization.cmx compiler/.zlcompilerlibs.objs/native/horizon.cmx compiler/.zlcompilerlibs.objs/native/encore.cmx compiler/.zlcompilerlibs.objs/native/disc.cmx compiler/.zlcompilerlibs.objs/native/deps_tools.cmx compiler/.zlcompilerlibs.objs/native/cse.cmx compiler/.zlcompilerlibs.objs/native/copy.cmx compiler/.zlcompilerlibs.objs/native/complete.cmx compiler/.zlcompilerlibs.objs/native/causality.cmx compiler/.zlcompilerlibs.objs/native/automata.cmx compiler/.zlcompilerlibs.objs/native/aform.cmx compiler/.zlcompilerlibs.objs/native/add_copy_for_last.cmx compiler/.zlcompilerlibs.objs/native/activate.cmx)
+Running[305]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I compiler/.zeluc.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o compiler/.zeluc.eobjs/byte/dune__exe__Zeluc.cmo -c -impl compiler/main/zeluc.ml)
+Running[306]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o compiler/zeluc.exe -custom /usr/lib/ocaml/unix.cma -I /usr/lib/ocaml /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cma compiler/zlcompilerlibs.cma compiler/.zeluc.eobjs/byte/dune__exe.cmo compiler/.zeluc.eobjs/byte/dune__exe__Compiler.cmo compiler/.zeluc.eobjs/byte/dune__exe__Simulator.cmo compiler/.zeluc.eobjs/byte/dune__exe__Zeluc.cmo)
+Running[307]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o compiler/zeluc.bc /usr/lib/ocaml/unix.cma /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cma compiler/zlcompilerlibs.cma compiler/.zeluc.eobjs/byte/dune__exe.cmo compiler/.zeluc.eobjs/byte/dune__exe__Compiler.cmo compiler/.zeluc.eobjs/byte/dune__exe__Simulator.cmo compiler/.zeluc.eobjs/byte/dune__exe__Zeluc.cmo)
+Running[308]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -shared -linkall -I compiler -o compiler/zlcompilerlibs.cmxs compiler/zlcompilerlibs.cmxa)
+Running[309]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I tools/.zltohtml.eobjs/byte -no-alias-deps -opaque -o tools/.zltohtml.eobjs/byte/dune__exe.cmo -c -impl tools/.zltohtml.eobjs/dune__exe.ml-gen)
+Running[310]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o tools/.zltohtml.eobjs/native/dune__exe.cmx -c -impl tools/.zltohtml.eobjs/dune__exe.ml-gen)
+Running[311]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I tools/.zltohtml.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/byte/dune__exe__Diff_log.cmo -c -impl tools/diff_log.ml)
+Running[312]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I tools/.zltohtml.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/byte/dune__exe__Compiler.cmo -c -impl tools/compiler.ml)
+Running[313]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I tools/.zltohtml.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/byte/dune__exe__Zlsdep.cmo -c -impl tools/zlsdep.ml)
+Running[314]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I tools/.zltohtml.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/byte/dune__exe__Zltohtml.cmo -c -impl tools/zltohtml.ml)
+Running[315]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/native/dune__exe__Diff_log.cmx -c -impl tools/diff_log.ml)
+Running[316]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/native/dune__exe__Compiler.cmx -c -impl tools/compiler.ml)
+Running[317]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I tools/.zltohtml.eobjs/byte -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/byte/dune__exe__Luciole_zls.cmo -c -impl tools/luciole_zls.ml)
+Running[318]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/native/dune__exe__Zlsdep.cmx -c -impl tools/zlsdep.ml)
+Running[319]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/native/dune__exe__Zltohtml.cmx -c -impl tools/zltohtml.ml)
+Running[320]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o tools/diff_log.exe /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cmxa compiler/zlcompilerlibs.cmxa /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml tools/.zltohtml.eobjs/native/dune__exe.cmx tools/.zltohtml.eobjs/native/dune__exe__Diff_log.cmx)
+Running[321]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I tools/.zltohtml.eobjs/byte -I tools/.zltohtml.eobjs/native -I /home/joselvdm/.opam/default/lib/menhirLib -I compiler/.zlcompilerlibs.objs/byte -I compiler/.zlcompilerlibs.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o tools/.zltohtml.eobjs/native/dune__exe__Luciole_zls.cmx -c -impl tools/luciole_zls.ml)
+Running[322]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o tools/zlsdep.exe /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cmxa compiler/zlcompilerlibs.cmxa /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml tools/.zltohtml.eobjs/native/dune__exe.cmx tools/.zltohtml.eobjs/native/dune__exe__Zlsdep.cmx)
+Running[323]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o tools/zltohtml.exe /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cmxa compiler/zlcompilerlibs.cmxa /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml tools/.zltohtml.eobjs/native/dune__exe.cmx tools/.zltohtml.eobjs/native/dune__exe__Zltohtml.cmx)
+Running[324]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -o tools/luciole_zls.exe /home/joselvdm/.opam/default/lib/menhirLib/menhirLib.cmxa compiler/zlcompilerlibs.cmxa /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml tools/.zltohtml.eobjs/native/dune__exe.cmx tools/.zltohtml.eobjs/native/dune__exe__Compiler.cmx tools/.zltohtml.eobjs/native/dune__exe__Luciole_zls.cmx)
+Running[325]: (cd _build/default/lib/std && ../../../install/default/bin/zeluc -nostdlib stdlib.zli)
+Running[326]: (cd _build/default/lib/std && ../../../install/default/bin/zeluc char.zli complex.zli int32.zli nativeint.zli int64.zli random.zli string.zli graphics.zli basics.zli node.zli run.zli list.zli)
+Running[327]: (cd _build/default/lib/gtk && ../../../install/default/bin/zeluc -I ../std input.zli gtkplot.zli)
+Running[328]: (cd _build/default/lib/std && ../../../install/default/bin/zeluc dump.zls)
+Running[329]: (cd _build/default/lib/gtk && ../../../install/default/bin/zeluc -I ../std scope.zls)
+Running[330]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/std/dump.ml) > _build/default/lib/std/.zlstdlib.objs/dump.ml.d
+Running[331]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/std/.zlstdlib.objs/byte -I /home/joselvdm/.opam/default/lib/sundialsml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/byte/dump.cmo -c -impl lib/std/dump.ml)
+Output[331]:
+File "lib/std/dump.ml", line 296, characters 11-16:
+296 |       let (x_469:unit) =
+                 ^^^^^
+Warning 26: unused variable x_469.
+Running[332]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/gtkplot.cmi -c -intf lib/gtk/gtkplot.mli)
+Running[333]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/input.cmo -c -impl lib/gtk/input.ml)
+Running[334]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/zlsrungtk.cmi -c -intf lib/gtk/zlsrungtk.mli)
+Running[335]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -I /home/joselvdm/.opam/default/lib/sundialsml -intf-suffix .ml -no-alias-deps -opaque -o lib/std/.zlstdlib.objs/native/dump.cmx -c -impl lib/std/dump.ml)
+Output[335]:
+File "lib/std/dump.ml", line 296, characters 11-16:
+296 |       let (x_469:unit) =
+                 ^^^^^
+Warning 26: unused variable x_469.
+Running[336]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o lib/std/zlstdlib.cma lib/std/.zlstdlib.objs/byte/ztypes.cmo lib/std/.zlstdlib.objs/byte/zls.cmo lib/std/.zlstdlib.objs/byte/illinois.cmo lib/std/.zlstdlib.objs/byte/zlsolve.cmo lib/std/.zlstdlib.objs/byte/zlsrun.cmo lib/std/.zlstdlib.objs/byte/odexx.cmo lib/std/.zlstdlib.objs/byte/solvers.cmo lib/std/.zlstdlib.objs/byte/run.cmo lib/std/.zlstdlib.objs/byte/lift.cmo lib/std/.zlstdlib.objs/byte/node_base.cmo lib/std/.zlstdlib.objs/byte/node.cmo lib/std/.zlstdlib.objs/byte/basics.cmo lib/std/.zlstdlib.objs/byte/dump.cmo lib/std/.zlstdlib.objs/byte/defaultsolver.cmo)
+Running[337]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/gtk/.gtklib.objs/byte -I lib/gtk/.gtklib.objs/native -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/native/gtkplot.cmx -c -impl lib/gtk/gtkplot.ml)
+Running[338]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/gtkplot.cmo -c -impl lib/gtk/gtkplot.ml)
+Running[339]: (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/gtk/scope.ml) > _build/default/lib/gtk/.gtklib.objs/scope.ml.d
+Running[340]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/gtk/.gtklib.objs/byte -I lib/gtk/.gtklib.objs/native -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/native/zlsrungtk.cmx -c -impl lib/gtk/zlsrungtk.ml)
+Running[341]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/zlsrungtk.cmo -c -impl lib/gtk/zlsrungtk.ml)
+Running[342]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o lib/std/zlstdlib.cmxa lib/std/.zlstdlib.objs/native/ztypes.cmx lib/std/.zlstdlib.objs/native/zls.cmx lib/std/.zlstdlib.objs/native/illinois.cmx lib/std/.zlstdlib.objs/native/zlsolve.cmx lib/std/.zlstdlib.objs/native/zlsrun.cmx lib/std/.zlstdlib.objs/native/odexx.cmx lib/std/.zlstdlib.objs/native/solvers.cmx lib/std/.zlstdlib.objs/native/run.cmx lib/std/.zlstdlib.objs/native/lift.cmx lib/std/.zlstdlib.objs/native/node_base.cmx lib/std/.zlstdlib.objs/native/node.cmx lib/std/.zlstdlib.objs/native/basics.cmx lib/std/.zlstdlib.objs/native/dump.cmx lib/std/.zlstdlib.objs/native/defaultsolver.cmx)
+Running[343]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/gtk/.gtklib.objs/byte -I lib/gtk/.gtklib.objs/native -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/native/input.cmx -c -impl lib/gtk/input.ml)
+Running[344]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -bin-annot -I lib/gtk/.gtklib.objs/byte -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/byte/scope.cmo -c -impl lib/gtk/scope.ml)
+Running[345]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -shared -linkall -I lib/std -o lib/std/zlstdlib.cmxs lib/std/zlstdlib.cmxa)
+Running[346]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -I lib/gtk/.gtklib.objs/byte -I lib/gtk/.gtklib.objs/native -I /home/joselvdm/.opam/default/lib/lablgtk2 -I /home/joselvdm/.opam/default/lib/sundialsml -I /usr/lib/ocaml/threads -I lib/std/.zlstdlib.objs/byte -I lib/std/.zlstdlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o lib/gtk/.gtklib.objs/native/scope.cmx -c -impl lib/gtk/scope.ml)
+Running[347]: (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o lib/gtk/gtklib.cma lib/gtk/.gtklib.objs/byte/zlsrungtk.cmo lib/gtk/.gtklib.objs/byte/gtkplot.cmo lib/gtk/.gtklib.objs/byte/scope.cmo lib/gtk/.gtklib.objs/byte/input.cmo)
+Running[348]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -a -o lib/gtk/gtklib.cmxa lib/gtk/.gtklib.objs/native/zlsrungtk.cmx lib/gtk/.gtklib.objs/native/gtkplot.cmx lib/gtk/.gtklib.objs/native/scope.cmx lib/gtk/.gtklib.objs/native/input.cmx)
+Running[349]: (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60 -warn-error -a+31 -g -shared -linkall -I lib/gtk -o lib/gtk/gtklib.cmxs lib/gtk/gtklib.cmxa)

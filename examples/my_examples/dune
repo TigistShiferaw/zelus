@@ -1,0 +1,10 @@
+(rule
+ (targets customize.ml customize_main.ml)
+ (deps (:zl customize.zls))
+ (action (run zeluc -gtk2 -s main -o customize_main %{zl})))
+
+(executable
+  (name customize_main)
+  (libraries lablgtk2 zelus zelus-gtk)
+  (foreign_stubs (language c) (names hello_stubs))
+  (promote (until-clean)))

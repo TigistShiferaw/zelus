@@ -11,7 +11,7 @@ let hybrid main () = () where
   and trigger = up(y) and
   present trigger -> local cpt in
     do  cpt = 0 fby cpt + 1
-    and () = move_robot(false)
-    and  () = print_endline (string_of_float last y) 
+    and () = move_robot(last y < 0.0)
+    (*and  () = print_endline (string_of_float last y) *)
     done
    
