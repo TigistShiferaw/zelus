@@ -255,6 +255,10 @@ and exp prio ff e =
   | Omove (e) -> 
       print_endline("Omove printing");
       fprintf ff "print_endline(\"robot is moving\")"
+  (*added here*)
+  | Ocontrol (e) -> 
+      print_endline("Ocontrol printing");
+      fprintf ff "print_endline(\"robot is moving\")"
   | Oinst(i) -> inst prio ff i
   end;
   if prio_e < prio then fprintf ff ")"
