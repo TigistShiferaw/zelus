@@ -51,6 +51,8 @@ type exp =
   | Oifthenelse of exp * exp * exp
   (*added here*)
   | Omove of exp
+  (*added here*)
+  | Ocontrol of exp
   | Omethodcall of method_call			       
   | Oinst of inst
                           
