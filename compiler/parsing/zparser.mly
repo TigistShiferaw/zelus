@@ -682,6 +682,9 @@ scondpat_desc :
   (*added here*)
   | R_MOVE e = simple_expression
       { Econdexp (make (Eop(Emove, [e])) $startpos $endpos)}
+  (*added here*)
+  | R_CONTROL e = simple_expression
+      { Econdexp (make (Eop(Econtrol, [e])) $startpos $endpos)}   
   (*added here
   | R_STORE rob = robot_expression
        {Econdexp (make (Eop(Estore, [rob])) $startpos $endpos)}*)
@@ -958,6 +961,9 @@ expression_desc:
   (*added here*)
   | R_MOVE e = expression
       { Eop(Emove, [e])}
+  (*added here*)
+  | R_CONTROL e = expression
+      { Eop(Econtrol, [e])}    
   (*added here
   | R_STORE rob = robot_expression
       { Eop(Estore, [rob])}*)
