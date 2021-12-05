@@ -91,7 +91,10 @@ let rec exp subst e =
   | Eassume(e1) ->
      { e with e_desc = Eassume(exp subst e1) }
   | Eperiod _ | Epresent _ | Ematch _ | Elet _ | Eblock _ -> assert false
-    
+  (*added here*)
+  | Estore(cmd, key) -> e  
+  (*added here*)
+  | Eget(cm) -> e  
 (* [equation subst eq = eq'] apply a substitution to eq. *)
 and equation subst eq =
   match eq.eq_desc with

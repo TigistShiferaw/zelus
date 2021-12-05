@@ -81,6 +81,8 @@ and add_exp bv exp =
   | Emove (e) -> add_exp bv e;*)
   (*added here*)
   | Estore (cmd , key) -> ()
+  (*added here*)
+  | Eget (cm) -> ()
   | Ematch (e, mhl) -> add_exp bv e; List.iter (add_match_handler add_exp bv) mhl
   | Epresent (phl, edo) ->  List.iter (add_present_handler add_exp bv) phl; add_opt (add_default add_exp) bv edo
   | Eautomaton (shl, seo) -> List.iter (add_state_handler add_exp bv) shl; add_opt add_state_exp bv seo
@@ -89,7 +91,7 @@ and add_exp bv exp =
 
 and add_op bv op =
   match op with
-  | Efby | Eunarypre | Eifthenelse | Eminusgreater | Eup| Einitial | Edisc | (*added here*) Emove | (*added here*) Econtrol
+  | Efby | Eunarypre | Eifthenelse | Eminusgreater | Eup| Einitial | Edisc | (*added here*) Emove|(*added here*) Econtrol |(*added here*) Estr
     | Etest | Eaccess | Eupdate | Econcat | Eatomic -> ()
   | Eslice (s1, s2) -> add_size bv s1; add_size bv s2
 and add_field bv (lbl, e) = add bv lbl; add_exp bv e

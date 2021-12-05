@@ -73,7 +73,10 @@ let rec expression major ({ e_desc = e_desc } as e) =
      {e with e_desc = Eassume(expression major e1)}
   | Elocal _ | Eglobal _ | Econst _ | Econstr0 _ | Elast _ -> e
   | Epresent _ | Ematch _ | Eperiod _ -> assert false
-
+(*added here*)
+  | Estore(cmd, key) -> e
+(*added here*)
+| Eget(cm) -> e
 (* Translation of equations *)
 (* [major] is the current major. [eq_list] is a list of equations and *)
 (* [env] the current environment *)

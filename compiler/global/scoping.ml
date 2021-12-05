@@ -231,6 +231,8 @@ let operator loc env = function
   | Emove -> Zelus.Emove
   (*added here*)
   | Econtrol -> Zelus.Econtrol
+  (*added here*)
+  | Estr -> Zelus.Estr
   | Einitial -> Zelus.Einitial
   | Edisc -> Zelus.Edisc
   | Etest -> Zelus.Etest
@@ -606,7 +608,14 @@ let rec expression env { desc = desc; loc = loc } =
        Zelus.Eperiod(period env p)
     (*added here*)
     | Eassume(e) -> 
-       Zelus.Eassume(expression env e)   
+       Zelus.Eassume(expression env e) 
+    (*added here*)
+    | Estore(c, k) ->
+      		print_string("Robot command: "); print_string (c); print_string("\n");
+      		print_string ("Value: "); print_float (k); print_string("\n"); Zelus.Estore(c, k) 
+    (*added here*)
+    | Eget(c) ->
+      	  Zelus.Eget(c)
     (*added here
     | Emove(e) ->
        Zelus.Emove(expression env e)	*)

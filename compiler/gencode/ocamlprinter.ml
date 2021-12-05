@@ -258,12 +258,21 @@ and exp prio ff e =
   | Omove(e) ->
       print_endline("Omove compilation");
       (*fprintf ff "print_endline(\"robot is moving\")"*)
-      fprintf ff "move_robot_ml %a" (exp 0) e
+      fprintf ff "move_robot_ml (%a)" (exp 0) e
   (*added here*)
-  | Ocontrol(e) ->
+  | Ocontrol(e1, e2) ->
       print_endline("Ocontrol compilation");
-      (*fprintf ff "print_endline(\"robot is moving\")"*)
-      fprintf ff "control_robot_ml %a" (exp 0) e
+      fprintf ff "control_robot_ml (%a) (%a)" (exp 0) e1 (exp 1) e2
+   (*added here*)
+   | Ostr(e1, e2) ->
+   print_endline("Ostr compilation");
+   fprintf ff "robot_str_ml (%a) (%a)" (exp 0) e1 (exp 1) e2
+  (*added here*)
+  | Ostore(cmd, key) ->
+      fprintf ff "robot_store\"%s\"  %f" cmd key
+   (*added here*)
+  | Oget(cm) ->
+   fprintf ff "robot_get \"%s\"" cm
   | Oinst(i) -> inst prio ff i
   end;
   if prio_e < prio then fprintf ff ")"
@@ -624,5 +633,9 @@ let implementation_list ff impl_list =
   fprintf ff "@[(* %s *)@.@]" header_in_file;
   fprintf ff "@[open Ztypes@.@]";
   (* added here *)
-  if !robot then (fprintf ff "@[external move_robot_ml: int -> unit = \"move_robot_c\" @.@]") else ();
+  if !robot then (fprintf ff "@[external move_robot_ml: int -> unit = \"move_robot_cpp\" @.@]
+  \n @[external robot_get: string -> float = \"robot_get_cpp\" @.@]
+  \n @[external robot_str_ml: string -> float -> unit = \"robot_str_cpp\" @.@] ") else();
+  if !robot then (fprintf ff "@[external control_robot_ml: int -> int -> unit = \"control_robot_c\" @.@]
+  \n @[external robot_store: string -> float -> unit = \"robot_store_c\" @.@] ") else ();
   List.iter (implementation ff) impl_list

@@ -324,6 +324,11 @@ let rec exp is_continuous env ({ e_desc = desc; e_typ = ty } as e) =
      let i = Init.new_var () in
      exp_less_than_on_i is_continuous env e i;
      Init.skeleton_on_i i ty
+     (*added here*)
+    | Estore(cmd,key) -> Init.skeleton_on_i (Init.new_var ()) ty
+    (*added here*)
+    | Eget(cm) -> Init.skeleton_on_i (Init.new_var ()) ty(*let i= Init.ivalue in
+    Init.skeleton_on_i i ty*)
     | Ematch(_, e, m_h_list) ->
         (* we force [e] to be always initialized. This is overly constraining *)
         (* but correct and simpler to justify *)
@@ -362,6 +367,20 @@ and operator is_continuous env op ty e_list =
      print_endline("Initialization");
      let i = Init.new_var () in
      exp_less_than_on_i is_continuous env e i;
+     Init.skeleton_on_i i ty;
+  (*added here*)
+  | Econtrol, [e1; e2] ->
+     print_endline("Initialization");
+     let i= Init.new_var () in 
+     exp_less_than_on_i is_continuous env e1 i;
+     exp_less_than_on_i is_continuous env e2 i;
+     Init.skeleton_on_i i ty;
+  (*added here*)
+  | Estr, [e1; e2] ->
+     print_endline("Initialization");
+     let i= Init.new_var () in 
+     exp_less_than_on_i is_continuous env e1 i;
+     exp_less_than_on_i is_continuous env e2 i;
      Init.skeleton_on_i i ty;
   | (Einitial | Eup |(*added here*) Eassert | Etest | Edisc
     | Eaccess | Eupdate | Eslice _ | Econcat), e_list ->

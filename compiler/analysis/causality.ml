@@ -351,6 +351,10 @@ let rec exp env c_free ({ e_desc = desc; e_typ = ty; e_loc = loc } as e) =
       (*exp_less_than_on_c env c_free e c_body;*) 
       exp_less_than_on_c env c_free e c_e;
       Causal.skeleton_on_c c_e ty
+    (*added here*)
+    | Estore(cmd, key) -> Causal.skeleton ty
+    (*added here*)
+    | Eget(cm) -> Causal.skeleton ty
     | Ematch(_, e, h_e_list) ->
         let c_body = Causal.intro_less_c c_free in
         let c_e = Causal.intro_less_c c_body in
@@ -406,6 +410,18 @@ and operator env op c_free ty e_list =
   | Emove, [e] ->
       print_endline("Causality");
       exp_less_than_on_c env c_free e (Causal.new_var ());
+      Causal.skeleton_on_c c_res ty 
+  (*added here*)
+  | Econtrol, [e1;e2] ->
+      print_endline("Causality");
+      exp_less_than_on_c env c_free e1 (Causal.new_var ());
+      exp_less_than_on_c env c_free e2 (Causal.new_var ());
+      Causal.skeleton_on_c c_res ty 
+  (*added here*)
+  | Estr, [e1;e2] ->
+      print_endline("Causality");
+      exp_less_than_on_c env c_free e1 (Causal.new_var ());
+      exp_less_than_on_c env c_free e2 (Causal.new_var ());
       Causal.skeleton_on_c c_res ty 
   | Einitial, [] ->
       Causal.skeleton_on_c c_res ty 

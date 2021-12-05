@@ -97,6 +97,7 @@ and doc_rif = "\t Use RIF format over stdin and stdout to communicate I/O to the
 and doc_deps = "\t Recursively compile dependencies"
 (* added here *)
 and doc_robot = "\t Enable robot mode"
+
 let errmsg = "Options are:"
 
 let set_verbose () =

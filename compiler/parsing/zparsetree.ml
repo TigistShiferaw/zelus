@@ -121,7 +121,9 @@ and desc =
   (*added here
   | Emove of exp*)
   (*added here*)
-  | Estore of name * int
+  | Estore of name * float
+  (*added here*)
+  | Eget of name 
   | Eperiod of period
   | Ematch of exp * exp match_handler list
   | Epresent of exp present_handler list * exp default option
@@ -137,7 +139,7 @@ and 'a default =
   | Init of 'a | Default of 'a
 
 and op =
-  | Efby | Eunarypre | Eifthenelse | Eminusgreater | (*added here*)Emove | (*added here*)Econtrol
+  | Efby | Eunarypre | Eifthenelse | Eminusgreater | (*added here*)Emove |(*added here*) Econtrol |(*added here*) Estr
   | Eup | Einitial | Edisc | Etest | Eaccess | Eupdate
   | Eslice of size * size | Econcat | Eatomic
 
@@ -162,7 +164,10 @@ and period =
     
 and robot_input =
   { cmd : name;
-    key : int }
+    key : float }
+and rbt_input =
+    { cm : name
+       }
 
 and constr = longname
 

@@ -147,11 +147,15 @@ let block l lo eq_list startpos endpos =
 (*added here*)
 %token ASSUME         /* "assume" */
 (*added here*)
-%token R_MOVE         /* "move_robot_zls" */
+%token R_MOVE        /* "move_robot_zls" */
 (*added here*)
-%token R_CONTROL         /* "control_robot_zls" */
+%token R_CONTROL      /* "control_robot_zls" */
 (*added here*)
 %token R_STORE        /* "robot_store" */
+(*added here*)
+%token R_STR        /* "robot_str" */
+(*added here*)
+%token R_GET        /* "robot_get" */
 %token EXCEPTION      /* "exception" */
 %token EXTERNAL       /* "external" */
 %token IN             /* "in" */
@@ -496,6 +500,9 @@ equation_desc:
   (*added here*)
   | R_STORE p = pattern EQUAL rob = robot_expression
     { EQeq(p, make (Estore(rob.cmd, rob.key)) $startpos(rob) $endpos(rob)) }
+    (*added here*)
+  | R_GET p = pattern EQUAL rob = rbt_expression
+    { EQeq(p, make (Eget(rob.cm)) $startpos(rob) $endpos(rob)) }
   | DER i = ide EQUAL e = seq_expression opt = optional_init
       { EQder(i, e, opt, []) }
   | DER i = ide EQUAL e = seq_expression opt = optional_init
@@ -684,7 +691,10 @@ scondpat_desc :
       { Econdexp (make (Eop(Emove, [e])) $startpos $endpos)}
   (*added here*)
   | R_CONTROL e = simple_expression
-      { Econdexp (make (Eop(Econtrol, [e])) $startpos $endpos)}   
+      { Econdexp (make (Eop(Econtrol, [e])) $startpos $endpos)}
+  (*added here*)
+  | R_STR e = simple_expression
+      { Econdexp (make (Eop(Estr, [e])) $startpos $endpos)}
   (*added here
   | R_STORE rob = robot_expression
        {Econdexp (make (Eop(Estore, [rob])) $startpos $endpos)}*)
@@ -962,8 +972,11 @@ expression_desc:
   | R_MOVE e = expression
       { Eop(Emove, [e])}
   (*added here*)
-  | R_CONTROL e = expression
-      { Eop(Econtrol, [e])}    
+  | R_CONTROL LPAREN e1= expression COMMA e2=expression RPAREN
+      { Eop(Econtrol, [e1;e2])}
+  (*added here*)
+  | R_STR LPAREN e1= expression COMMA e2=expression RPAREN
+      { Eop(Estr, [e1;e2])}
   (*added here
   | R_STORE rob = robot_expression
       { Eop(Estore, [rob])}*)
@@ -1029,6 +1042,9 @@ expression_desc:
   (*added here*)
   | R_STORE rob = robot_expression
         {Estore(rob.cmd, rob.key)}
+  (*added here*)
+  | R_GET rob = rbt_expression
+        {Eget(rob.cm)}
   | AUTOMATON opt_bar a = automaton_handlers(seq_expression)
       { Eautomaton(List.rev a, None) }
   | AUTOMATON opt_bar a = automaton_handlers(seq_expression) INIT s = state
@@ -1057,9 +1073,12 @@ period_expression:
 ;
 (*added here*)
 robot_expression:
-  | LPAREN r_cmd = ide COMMA r_key = INT RPAREN
+  | LPAREN r_cmd = STRING COMMA r_key = FLOAT RPAREN
       {{cmd = r_cmd; key = r_key}}
-      
+  (*added here*)
+rbt_expression:
+  | LPAREN r_cm = STRING   RPAREN
+      {{cm = r_cm}}  
 constructor:
   | c = CONSTRUCTOR
       { Name(c) } %prec prec_ident

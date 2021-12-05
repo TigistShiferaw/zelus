@@ -116,7 +116,8 @@ and desc =
   | Eassume of exp
   (*added here
   | Emove of exp*)
-  | Estore (*custom keyword*)
+  | Estore of string * float (*custom keyword*)
+  | Eget of string  (*custom keyword*)
   | Eblock of eq list block * exp
 
 and is_rec = bool
@@ -132,6 +133,8 @@ and op =
   | Emove (*custom keyword*)
   (*added here*)
   | Econtrol (*custom keyword*)
+  (*added here*)
+  | Estr (*custom keyword*)
   | Einitial (* true at the very first instant *)
   | Edisc (* discontinuity of a flow *)
   | Ehorizon (* generate an event at a given horizon *)

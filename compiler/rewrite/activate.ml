@@ -85,6 +85,10 @@ let rec exp e =
     | Eseq(e1, e2) -> Eseq(exp e1, exp e2)
     (*added here*)
     | Eassume(e1) -> Eassume(exp e1)
+     (*added here*)
+    | Estore(cmd,key) -> Estore(cmd, key)
+     (*added here*)
+     | Eget(cm) -> Eget(cm)
     | Eperiod { p_phase = p1; p_period = p2 } ->
        Eperiod { p_phase = Zmisc.optional_map exp p1; p_period = exp p2 }
     | Elet(l, e) -> Elet(local l, exp e)

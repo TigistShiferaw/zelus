@@ -129,7 +129,10 @@ let rec expression renaming ({ e_desc = desc } as e) =
      let renaming, l = local renaming l in
      { e with e_desc = Elet(l, expression renaming e_let) }
   | Eperiod _ | Epresent _ | Ematch _ | Eblock _ -> assert false
-						
+	(*added here*)
+  | Estore(cmd,key) -> e
+  (*added here*)
+  | Eget(cm) -> e
 (** Local declarations *)
 and local renaming ({ l_eq = eq_list } as l) =
   let rel = List.fold_left build Env.empty eq_list in

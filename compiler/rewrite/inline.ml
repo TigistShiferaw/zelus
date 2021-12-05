@@ -115,6 +115,8 @@ let operator renaming op =
   | Eup |(*added here*) Eassert | Etest | Edisc | Ehorizon | Einitial | Eaccess
   | Eupdate | Econcat | Eatomic -> op
   | Emove -> print_endline("Inline"); op
+  | Econtrol -> print_endline("Inline"); op
+  | Estr -> print_endline("Inline"); op
   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
   		       
 (** Renaming of patterns *)
@@ -189,6 +191,10 @@ let rec expression renaming ({ e_desc = desc } as e) =
   (*added here*)
   | Eassume(e1) -> 
      {e with e_desc = Eassume(expression renaming e1)}
+   (*added here*)
+  | Estore(cmd, key) -> e
+    (*added here*)
+    | Eget(cm) -> e
   | Eperiod { p_phase = p1; p_period = p2 } ->
      { e with e_desc = Eperiod { p_phase = Zmisc.optional_map (expression renaming) p1;
                                  p_period = expression renaming p2 } }
