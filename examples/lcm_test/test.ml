@@ -1,11 +1,16 @@
 (* The Zelus compiler, version 2.1-dev
-  (2021-10-14-4:50) *)
+  (2021-12-5-16:8) *)
 open Ztypes
 external move_robot_ml: int -> unit = "move_robot_cpp" 
 
+  
  external robot_get: string -> float = "robot_get_cpp" 
+
+  
+ external robot_str_ml: string -> float -> unit = "robot_str_cpp" 
  external control_robot_ml: int -> int -> unit = "control_robot_c" 
 
+  
  external robot_store: string -> float -> unit = "robot_store_c" 
  type state__124 =
  Test_StopB_21 | Test_Backward_20 | Test_StopF_19 | Test_Forward_18 

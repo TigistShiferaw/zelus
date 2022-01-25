@@ -47,6 +47,7 @@ and type_expression_desc =
     | Etypetuple of type_expression list
     | Etypevec of type_expression * size
     | Etypefun of kind * string option * type_expression * type_expression
+    (*| Erefinement of type_expression * exp*)
 
 and size = size_desc localized
 
@@ -87,6 +88,8 @@ and implementation_desc =
     | Etypedecl of name * name list * type_decl
     | Econstdecl of name * is_static * exp
     | Efundecl of name * funexp
+    (*refinement type implementation*)
+    | Erefinementdecl of name *  exp* exp
 
 and funexp =
   { f_kind: kind;
@@ -124,6 +127,7 @@ and desc =
   | Estore of name * float
   (*added here*)
   | Eget of name 
+  
   | Eperiod of period
   | Ematch of exp * exp match_handler list
   | Epresent of exp present_handler list * exp default option
@@ -139,7 +143,7 @@ and 'a default =
   | Init of 'a | Default of 'a
 
 and op =
-  | Efby | Eunarypre | Eifthenelse | Eminusgreater | (*added here*)Emove |(*added here*) Econtrol |(*added here*) Estr
+  | Efby | Eunarypre | Eifthenelse | Eminusgreater | (*added here*)Emove |(*added here*) Econtrol |(*added here*) Estr |(*added here*) Einp |(*added here*) Eoup
   | Eup | Einitial | Edisc | Etest | Eaccess | Eupdate
   | Eslice of size * size | Econcat | Eatomic
 

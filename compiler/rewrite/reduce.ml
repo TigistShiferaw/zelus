@@ -597,6 +597,23 @@ let implementation_list ff impl_list =
          else expression Env.empty Env.empty empty e in
        { impl with desc = Econstdecl(f, is_static, e) } ::
 	 List.fold_right make fun_defs impl_defs
+    (*TODO: refinement implementation of reduce*)
+    | Erefinementdecl(f, e1, e2) ->
+       (* is [is_static = true], f is a compile-time constant *)
+       let e2, { fundefs = fun_defs } =
+         if false then
+           try
+             let v = Static.expression Env.empty e2 in
+             (* add [f \ v] in the global symbol table *)
+             let v = Global.value_name (Modules.qualify f) v in
+             set_value_code f v;
+             exp_of_value empty v
+           with
+             Static.Error _ -> expression Env.empty Env.empty empty e2
+         else expression Env.empty Env.empty empty e2 in
+        (*let e1, { fundefs = fun_defs } = expression Env.empty Env.empty empty e1 in *)
+       { impl with desc = Erefinementdecl(f, e1, e2) } ::
+	 List.fold_right make fun_defs impl_defs   
     | Efundecl(f, funexp) ->
        let ({ info = { value_typ = tys } } as entry) =
 	 try Modules.find_value (Lident.Name(f))

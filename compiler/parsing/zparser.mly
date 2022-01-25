@@ -155,6 +155,12 @@ let block l lo eq_list startpos endpos =
 (*added here*)
 %token R_STR        /* "robot_str" */
 (*added here*)
+(*added here*)
+%token R_IP        /* "ip" */
+(*added here*)
+(*added here*)
+%token R_OP        /* "op" */
+(*added here*)
 %token R_GET        /* "robot_get" */
 %token EXCEPTION      /* "exception" */
 %token EXTERNAL       /* "external" */
@@ -306,8 +312,10 @@ implementation:
       { Eopen c }
   | TYPE tp = type_params id = IDENT td = localized(type_declaration_desc)
       { Etypedecl(id, tp, td) }
-  | LET ide = ide EQUAL seq = seq_expression
+  | LET ide = ide  EQUAL seq = seq_expression
       { Econstdecl(ide, false, seq) }
+  | LET ide = ide LBRACE  seq1= expression RBRACE EQUAL seq = seq_expression
+      { Erefinementdecl(ide, seq1, seq)}
   | LET STATIC ide = ide EQUAL seq = seq_expression
       { Econstdecl(ide, true, seq) }
   | LET ide = ide fn = simple_pattern_list EQUAL seq = seq_expression
@@ -689,12 +697,19 @@ scondpat_desc :
   (*added here*)
   | R_MOVE e = simple_expression
       { Econdexp (make (Eop(Emove, [e])) $startpos $endpos)}
+      
   (*added here*)
   | R_CONTROL e = simple_expression
       { Econdexp (make (Eop(Econtrol, [e])) $startpos $endpos)}
   (*added here*)
   | R_STR e = simple_expression
       { Econdexp (make (Eop(Estr, [e])) $startpos $endpos)}
+  (*added here*)
+  | R_IP e = simple_expression
+      { Econdexp (make (Eop(Einp, [e])) $startpos $endpos)} 
+  (*added here*)
+  | R_OP e = simple_expression
+      { Econdexp (make (Eop(Eoup, [e])) $startpos $endpos)}       
   (*added here
   | R_STORE rob = robot_expression
        {Econdexp (make (Eop(Estore, [rob])) $startpos $endpos)}*)
@@ -921,6 +936,9 @@ simple_expression_desc:
   | LBRACKETBAR e1 = simple_expression WITH i = simple_expression
 					     EQUAL e2 = expression RBRACKETBAR
       { Eop(Eupdate, [e1; i; e2]) }
+  (* add refinement type matching here
+  | e = simple_expression DOT i = ext_ident
+      { Erecord_access(e, i) }    *)
 ;
 
 simple_expression_list :
@@ -977,6 +995,12 @@ expression_desc:
   (*added here*)
   | R_STR LPAREN e1= expression COMMA e2=expression RPAREN
       { Eop(Estr, [e1;e2])}
+  (*added here*)
+  |R_IP  e = expression 
+     {Eop(Einp, [e])}  
+  (*added here*)
+  | R_OP e = expression
+      { Eop(Eoup, [e])}      
   (*added here
   | R_STORE rob = robot_expression
       { Eop(Estore, [rob])}*)
@@ -1193,7 +1217,12 @@ type_expression:
   | LPAREN id = IDENT COLON t_arg = type_expression RPAREN
 			    a = arrow t_res = type_expression
       { make(Etypefun(a, Some(id), t_arg, t_res)) $startpos $endpos}
-;
+  (*Refinement type expression*)
+  (* TODO: Make a refinement type data structure that stores all the data from this *)
+  (*make(Erefinement(basetype, seq)) $startpos $endpos
+  |LBRACE seq = seq_expression RBRACE {make(Erefinement(seq)) $startpos $endpos}   *)  
+; 
+   
 
 simple_type:
   | t = type_var

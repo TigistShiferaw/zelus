@@ -1,0 +1,8 @@
+
+let x{op"channel"}=7
+let hybrid main () = () where
+  rec trigger = (period (1.))
+  and () = present(trigger) ->
+    ((print_int x))
+
+  else ()

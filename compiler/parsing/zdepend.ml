@@ -53,6 +53,8 @@ and add_implem bv i =
   | Eopen s ->
     if not (StringSet.mem s !bv) then bv := StringSet.add s !bv;
   | Etypedecl (_, _, td) -> add_type_decl bv td
+  (*added here*)
+  | Erefinementdecl (_,_,e) -> add_exp bv e
   | Econstdecl (_, _, e) -> add_exp bv e
   | Efundecl (_, { f_args; f_body; _ }) ->
      List.iter (add_pattern bv) f_args;
@@ -91,7 +93,7 @@ and add_exp bv exp =
 
 and add_op bv op =
   match op with
-  | Efby | Eunarypre | Eifthenelse | Eminusgreater | Eup| Einitial | Edisc | (*added here*) Emove|(*added here*) Econtrol |(*added here*) Estr
+  | Efby | Eunarypre | Eifthenelse | Eminusgreater | Eup| Einitial | Edisc | (*added here*) Emove|(*added here*) Econtrol |(*added here*) Estr |(*added here*) Einp |(*added here*) Eoup
     | Etest | Eaccess | Eupdate | Econcat | Eatomic -> ()
   | Eslice (s1, s2) -> add_size bv s1; add_size bv s2
 and add_field bv (lbl, e) = add bv lbl; add_exp bv e

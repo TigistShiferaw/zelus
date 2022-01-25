@@ -259,6 +259,9 @@ let implementation impl =
   | Eopen _ | Etypedecl _ -> impl
   | Econstdecl(n, is_static, e) ->
      { impl with desc = Econstdecl(n, is_static, make_let e) }
+  (*TODO: refinement implementation of letin*)
+  | Erefinementdecl(n,e1,e2) ->
+     { impl with desc = Erefinementdecl(n, make_let e1, make_let e2) }   
   | Efundecl(n, ({ f_kind = k; f_body = e } as body)) ->
      { impl with desc = Efundecl(n, { body with f_body = make_let e }) }
        

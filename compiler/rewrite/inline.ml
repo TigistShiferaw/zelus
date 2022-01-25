@@ -80,6 +80,7 @@ let rename x renaming =
 (** Renaming of type expressions *)
 let rec type_expression renaming ({ desc = desc } as ty_e) =
   match desc with
+  (*| Erefinement(_ , _) | Etypevar _ -> ty_e*)
   | Etypevar _ -> ty_e
   | Etypeconstr(g, ty_list) ->
      { ty_e with desc =
@@ -117,6 +118,8 @@ let operator renaming op =
   | Emove -> print_endline("Inline"); op
   | Econtrol -> print_endline("Inline"); op
   | Estr -> print_endline("Inline"); op
+  | Einp -> print_endline("Inline"); op
+  | Eoup -> print_endline("Inline"); op
   | Eslice(s1, s2) -> Eslice(size renaming s1, size renaming s2)
   		       
 (** Renaming of patterns *)

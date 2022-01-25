@@ -1,12 +1,27 @@
 (* The Zelus compiler, version 2.1-dev
-  (2021-09-12-13:21) *)
+  (2022-01-10-12:11) *)
 open Ztypes
 external move_robot_ml: int -> unit = "move_robot_cpp" 
-external control_robot_ml: int -> int -> unit = "control_robot_c" 
 
+  
+ external robot_get: string -> float = "robot_get_cpp" 
+
+  
+ external robot_str_ml: string -> float -> unit = "robot_str_cpp" 
+ external control_robot_ml: int -> int -> unit = "control_robot_c" 
+
+  
  external robot_store: string -> float -> unit = "robot_store_c" 
- type state__124 =
- Test_StopB_21 | Test_Backward_20 | Test_StopF_19 | Test_Forward_18 
+
+  (*
+ external inp_ml:  string -> unit = "inp_c" 
+*) 
+  
+ external oup_ml:  string-> unit = "oup_c" 
+type state__136 =
+Test_StopB_21 | Test_Backward_20 | Test_StopF_19 | Test_Forward_18 
+let x = inp_ml ("channel")
+
 type ('i , 'h , 'g , 'f , 'e , 'd , 'c , 'b , 'a) _main =
   { mutable major_35 : 'i ;
     mutable h_47 : 'h ;
@@ -26,7 +41,7 @@ let main (cstate_48:Ztypes.cstate) =
       i_43 = (false:bool) ;
       h_41 = (42.:float) ;
       r_40 = (false:bool) ;
-      s_39 = (Test_StopB_21:state__124) ;
+      s_39 = (Test_StopB_21:state__136) ;
       result_38 = (():unit) ; vel1_37 = (42:int) } in
   let main_step self ((time_34:float) , ()) =
     ((self.major_35 <- cstate_48.major ;
@@ -83,7 +98,7 @@ let main (cstate_48:Ztypes.cstate) =
                    | true ->
                        let _ = print_int self.vel1_37 in
                        let _ = print_newline () in
-                       self.result_38 <- (move_robot_ml (self.vel1_37))
+                       self.result_38 <- (inp_ml ("trans_v"))
                    | _ -> self.result_38 <- ()  end) ;
             (let () = self.result_38 in
              ())) in

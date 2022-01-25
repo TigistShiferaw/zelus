@@ -368,6 +368,18 @@ and operator is_continuous env op ty e_list =
      let i = Init.new_var () in
      exp_less_than_on_i is_continuous env e i;
      Init.skeleton_on_i i ty;
+   (*added here*)
+  | Einp, [e] ->
+     print_endline("Initialization");
+     let i = Init.new_var () in
+     exp_less_than_on_i is_continuous env e i;
+     Init.skeleton_on_i i ty;   
+   (*added here*)
+  | Eoup, [e] ->
+     print_endline("Initialization");
+     let i = Init.new_var () in
+     exp_less_than_on_i is_continuous env e i;
+     Init.skeleton_on_i i ty;   
   (*added here*)
   | Econtrol, [e1; e2] ->
      print_endline("Initialization");
@@ -653,8 +665,21 @@ let implementation ff impl =
         Global.set_init (Modules.find_value (Lident.Name(f))) tis;
         (* output the signature *)
         if !Zmisc.print_initialization_types then Pinit.declaration ff f tis
-  with
-  | Error(loc, kind) -> message loc kind
-                          
+  
+  (*TODO: implement initialization for refinement types*)
+    | Erefinementdecl(f,e1,e2) ->
+        let ti_zero = Init.skeleton_on_i izero e2.e_typ in
+        let ti_one = Init.skeleton_on_i izero e1.e_typ in
+        Zmisc.push_binding_level ();
+        exp_less_than false Env.empty e2 ti_zero;
+         exp_less_than false Env.empty e1 ti_one;
+        Zmisc.pop_binding_level ();
+        let tis = generalise ti_zero in
+        let tiss = generalise ti_one in
+        Global.set_init (Modules.find_value (Lident.Name(f))) tis;
+        (* output the signature *)
+        if !Zmisc.print_initialization_types then Pinit.declaration ff f tis
+  with      
+  | Error(loc, kind) -> message loc kind                        
 let implementation_list ff impl_list =
   List.iter (implementation ff) impl_list; impl_list

@@ -10,7 +10,7 @@
 (*  the terms of the INRIA Non-Commercial License Agreement (see the   *)
 (*  LICENSE file).                                                     *)
 (*                                                                     *)
-(* *********************************************************************)
+(* *****************************************************f****************)
 
 (* abstract syntax tree of the object code *)
 
@@ -51,6 +51,10 @@ type exp =
   | Oifthenelse of exp * exp * exp
   (*added here*)
   | Omove of exp
+   (*added here*)
+  | Oinp of exp
+   (*added here*)
+  | Ooup of exp
   (*added here*)
   | Ocontrol of exp * exp
   (*added here*)
@@ -179,6 +183,7 @@ and implementation_list = implementation list
 
 and implementation = 
   | Oletvalue of name * inst
+  | Oletvalue1 of name * inst*inst
   | Oletfun of name * pattern list * inst
   | Oletmachine of name * machine
   | Oopen of string

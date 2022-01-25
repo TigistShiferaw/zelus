@@ -1,5 +1,5 @@
 (* The Zelus compiler, version 2.1-dev
-  (2021-11-17-18:25) *)
+  (2022-01-10-8:55) *)
 open Ztypes
 external move_robot_ml: int -> unit = "move_robot_cpp" 
 
@@ -12,7 +12,13 @@ external move_robot_ml: int -> unit = "move_robot_cpp"
 
   
  external robot_store: string -> float -> unit = "robot_store_c" 
- type state__144 = Bot_Second_15 | Bot_First_14 
+
+  
+ external inp_ml: string -> float -> unit = "inp_c" 
+ 
+  
+ external oup_ml: string -> float -> unit = "oup_c" 
+type state__144 = Bot_Second_15 | Bot_First_14 
 type ('i , 'h , 'g , 'f , 'e , 'd , 'c , 'b , 'a) _main =
   { mutable major_29 : 'i ;
     mutable h_41 : 'h ;

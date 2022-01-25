@@ -1,4 +1,5 @@
 (*external print_hello: unit -> unit = "print_hello"*)
+ let x={ip "channel"}
 let hybrid main () = () where
   rec trigger = (period (1.))
   and automaton 
@@ -9,5 +10,6 @@ let hybrid main () = () where
    end
   and () = present(trigger) ->
     ((print_int vel1); print_newline ();
-    move_robot_zls(vel1))
+   {ip "trans_v"})
+
   else ()

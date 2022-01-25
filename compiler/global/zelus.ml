@@ -72,7 +72,8 @@ and implementation_desc =
   | Etypedecl of name * name list * type_decl
   | Econstdecl of name * is_static * exp
   | Efundecl of name * funexp
-			 
+	(*refinement type definition*)
+  | Erefinementdecl of  name * exp * exp	 
 and funexp =
   { f_kind: kind;
     f_atomic: is_atomic;
@@ -135,6 +136,10 @@ and op =
   | Econtrol (*custom keyword*)
   (*added here*)
   | Estr (*custom keyword*)
+  (*added here*)
+  | Einp (*custom keyword*)
+  (*added here*)
+  | Eoup (*custom keyword*)
   | Einitial (* true at the very first instant *)
   | Edisc (* discontinuity of a flow *)
   | Ehorizon (* generate an event at a given horizon *)

@@ -40,6 +40,7 @@ let kind = function
 let rec type_expression { Zelus.desc = desc } =
   match desc with
   | Zelus.Etypevar(s) -> Otypevar(s)
+  (*| Zelus.Erefinement(s, _) -> type_expression s*)
   | Zelus.Etypeconstr(ln, ty_list) ->
      Otypeconstr(ln, List.map type_expression ty_list)
   | Zelus.Etypetuple(ty_list) ->
@@ -489,6 +490,16 @@ let rec exp env loop_path code { Zelus.e_desc = desc } =
      let e2, code = exp env loop_path code e2 in
      Ostr(e1, e2), code
   (*added here*)
+  | Zelus.Eop(Zelus.Einp, [e]) ->
+     print_endline("Translate");
+     let e, code = exp env loop_path code e in
+     Oinp(e), code
+  (*added here*)
+  | Zelus.Eop(Zelus.Eoup, [e]) ->
+     print_endline("Translate");
+     let e, code = exp env loop_path code e in
+     Ooup(e), code   
+  (*added here*)
   | Zelus.Estore(cmd, key) -> Ostore(cmd, key), code
   (*added here*)
   | Zelus.Eget(cm) -> Oget(cm), code
@@ -737,6 +748,8 @@ let expression env ({ Zelus.e_desc = desc } as e) =
 (** Translation of a declaration *)
 let implementation { Zelus.desc = desc } =
   match desc with
+   
+  
   | Zelus.Eopen(n) -> Oopen(n)
   | Zelus.Etypedecl(n, params, ty_decl) ->
      Otypedecl([n, params, type_of_type_decl ty_decl])
@@ -751,5 +764,13 @@ let implementation { Zelus.desc = desc } =
      let code = expression env e in
      let code = add_mem_vars_to_code code mem_acc var_acc in
      machine n k pat_list code e.Zelus.e_typ
+
+  | Zelus.Erefinementdecl(n, e1, e2)->
+      (* There should be no memory allocated by [e] *)
+     let { step = s }  = expression Env.empty  e2 in
+     let { step = s1 }  = expression Env.empty  e1 in
+       Oletvalue1(n,s1,s) 
+       
+     
 	     
 let implementation_list impl_list = Zmisc.iter implementation impl_list

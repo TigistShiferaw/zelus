@@ -828,6 +828,14 @@ and operator expected_k h loc op e_list =
     | Estr ->
         let ty = new_var () in
         Tdiscrete(true), [Initial.typ_string; Initial.typ_float], ty
+    (*added here*)
+    | Einp ->
+        let ty = new_var () in
+        Tany,[Initial.typ_string], ty   
+    (*added here*)
+    | Eoup ->
+        let ty = new_var () in
+        Tany, [Initial.typ_string], ty     
     | Etest ->
         let ty = new_var () in
         Tany, [Initial.typ_bool], Initial.typ_signal ty
@@ -1390,6 +1398,12 @@ let implementation ff is_first impl =
        let tys = constdecl f is_static e in
        if is_first then Interface.add_type_of_value ff impl.loc f is_static tys
        else Interface.update_type_of_value ff impl.loc f is_static tys
+    (*TODO: add refinement type implementation here*)
+    |Erefinementdecl(f, e1, e2) -> 
+      let tys = constdecl f false e2 in
+      let tys = constdecl f false e1 in
+      if is_first then Interface.add_type_of_value ff impl.loc f false tys
+      else Interface.update_type_of_value ff impl.loc f false tys   
     | Efundecl(f, body) ->
        let tys = fundecl impl.loc f body in
        if is_first then Interface.add_type_of_value ff impl.loc f true tys

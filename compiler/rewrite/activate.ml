@@ -183,5 +183,8 @@ let implementation impl =
        { impl with desc = Econstdecl(n, is_static, exp e) }
     | Efundecl(n, ({ f_body = e } as body)) ->
         { impl with desc = Efundecl(n, { body with f_body = exp e }) }
+     (*TODO: refinement implementation of activate*)
+    | Erefinementdecl(n,e1,e2) ->
+       { impl with desc = Erefinementdecl(n,exp e1, exp e2) }    
 
 let implementation_list impl_list = Zmisc.iter implementation impl_list

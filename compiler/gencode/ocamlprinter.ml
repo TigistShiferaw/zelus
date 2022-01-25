@@ -259,6 +259,7 @@ and exp prio ff e =
       print_endline("Omove compilation");
       (*fprintf ff "print_endline(\"robot is moving\")"*)
       fprintf ff "move_robot_ml (%a)" (exp 0) e
+
   (*added here*)
   | Ocontrol(e1, e2) ->
       print_endline("Ocontrol compilation");
@@ -267,6 +268,14 @@ and exp prio ff e =
    | Ostr(e1, e2) ->
    print_endline("Ostr compilation");
    fprintf ff "robot_str_ml (%a) (%a)" (exp 0) e1 (exp 1) e2
+  (*added here*)
+  | Oinp(e) ->
+      print_endline("Oinp compilation");
+      fprintf ff "inp_ml (%a)" (exp 0) e
+  (*added here*)
+  | Ooup(e) ->
+      print_endline("Ooup compilation");
+      fprintf ff "oup_ml (%a)" (exp 0) e
   (*added here*)
   | Ostore(cmd, key) ->
       fprintf ff "robot_store\"%s\"  %f" cmd key
@@ -611,8 +620,12 @@ let machine f ff { ma_kind = k;
 	  tuple_of_methods m_list
 
 let implementation ff impl = match impl with
+  
   | Oletvalue(n, i) ->
      fprintf ff "@[<v 2>let %a = %a@.@.@]" shortname n (inst 0) i
+  | Oletvalue1(n,i1, i) ->
+    
+     fprintf ff "the output variable is %a" (inst 0) i1
   | Oletfun(n, pat_list, i) ->
      fprintf ff "@[<v 2>let %a %a =@ %a@.@.@]"
              shortname n pattern_list pat_list (inst 0) i
@@ -637,5 +650,7 @@ let implementation_list ff impl_list =
   \n @[external robot_get: string -> float = \"robot_get_cpp\" @.@]
   \n @[external robot_str_ml: string -> float -> unit = \"robot_str_cpp\" @.@] ") else();
   if !robot then (fprintf ff "@[external control_robot_ml: int -> int -> unit = \"control_robot_c\" @.@]
-  \n @[external robot_store: string -> float -> unit = \"robot_store_c\" @.@] ") else ();
+  \n @[external robot_store: string -> float -> unit = \"robot_store_c\" @.@]
+  \n @[external inp_ml:  string -> unit = \"inp_c\" @.@]
+  \n @[external oup_ml:  string-> unit = \"oup_c\" @.@]") else ();
   List.iter (implementation ff) impl_list

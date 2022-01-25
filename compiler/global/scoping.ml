@@ -233,6 +233,10 @@ let operator loc env = function
   | Econtrol -> Zelus.Econtrol
   (*added here*)
   | Estr -> Zelus.Estr
+    (*added here*)
+  | Einp -> Zelus.Einp
+    (*added here*)
+  | Eoup -> Zelus.Eoup
   | Einitial -> Zelus.Einitial
   | Edisc -> Zelus.Edisc
   | Etest -> Zelus.Etest
@@ -967,6 +971,9 @@ let implementation imp =
     let desc = match imp.desc with
       | Econstdecl(n, is_static, e) ->
          Zelus.Econstdecl(n, is_static, expression Rename.empty e)
+      (*added here*)
+      | Erefinementdecl(n, e1, e2) ->
+      	 Zelus.Erefinementdecl(n,  expression  Rename.empty e1, expression Rename.empty e2)   
       | Efundecl(n, { f_kind = k; f_atomic = is_atomic; f_args = p_list;
 		      f_body = e; f_loc = loc }) ->
          let _, env, p_list = pattern_list Rename.empty p_list in

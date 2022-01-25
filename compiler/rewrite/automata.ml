@@ -528,6 +528,11 @@ let implementation impl =
     | Econstdecl(n, is_static, e) ->
         let e = exp S.empty e in
         { impl with desc = Econstdecl(n, is_static, e) }
+    (*TODO: refinement implementation of automata*)
+    | Erefinementdecl(n,e1,e2) -> 
+        let e1 = exp S.empty e1 in
+        let e2 = exp S.empty e2 in
+        { impl with desc = Erefinementdecl(n,e1,e2) }    
     | Efundecl(n, ({ f_body = e } as body)) ->
         { impl with desc = Efundecl(n, { body with f_body = exp S.empty e }) }
 
